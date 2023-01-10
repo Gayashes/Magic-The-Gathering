@@ -13,14 +13,18 @@ module.exports = {
         allowNull: false,
       },
       link: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING,
         allowNull: true,
       },
       cost: {
-        type: Sequelize.DECIMAL(10, 2),
+        type: Sequelize.STRING,
         allowNull: true,
       },
       condition: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      description: {
         type: Sequelize.STRING,
         allowNull: true,
       },
@@ -35,15 +39,16 @@ module.exports = {
           model: 'Users',
           key: 'id',
         },
-        createdAt: {
-          allowNull: false,
-          type: Sequelize.DATE,
-        },
-        updatedAt: {
-          allowNull: false,
-          type: Sequelize.DATE,
-        },
       },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+
     });
   },
   async down(queryInterface, Sequelize) {

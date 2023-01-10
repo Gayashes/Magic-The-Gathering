@@ -5,11 +5,14 @@ const Regist = require('../views/Registration');
 const { User } = require('../../db/models');
 
 const regUser = async (req, res) => {
-    console.log(req.body);
-  const { name, password, email, city } = req.body;
+  const {
+    name, password, email, city,
+  } = req.body;
   try {
     const hash = await bcrypt.hash(password, 12);
-    const newUser = await User.create({ city, email, name, password: hash });
+    const newUser = await User.create({
+      city, email, name, password: hash,
+    });
     req.session.userName = newUser.name;
     req.session.save(() => {
       res.redirect('/');
