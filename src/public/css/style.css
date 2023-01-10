@@ -25,3 +25,10 @@
       width: 1170px;
     }
   }
+  .cardAll {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  
+  }
+  
