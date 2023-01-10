@@ -66,7 +66,7 @@ function Layout({ children, user }) {
           </nav>
           )}
 
-        <div className="container">{children}</div>
+        <div className="container d-flex flex-row">{children}</div>
 
         <footer className="bg-light text-center text-lg-start footer">
           <div className="text-center p-3">
