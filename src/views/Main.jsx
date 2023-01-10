@@ -2,9 +2,10 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Main({ allCard }) {
+function Main({ allCard, user }) {
   return (
-    <Layout>
+    <Layout user={user}>
+      { user ? ()}
       {allCard.map((card) => (
        <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-around row row-cols-1 row-cols-md-2 g-4">
        <div className="col-sm-6">
