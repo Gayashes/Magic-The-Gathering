@@ -12,7 +12,7 @@ const FileStore = require('session-file-store')(session);
 const dbCheck = require('../db/dbCheck');
 
 // импорт роутов
-const indexRoutes = require('./routes/indexRoutes');
+const mainRoutes = require('./routes/mainRoutes');
 
  // вызов функции проверки соединения с базоый данных
 dbCheck();
@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //роутеры
-app.use('/', indexRoutes);
+app.use('/', mainRoutes);
 
 const PORT = process.env.PORT || 3100;
 app.listen(PORT, (err) => {

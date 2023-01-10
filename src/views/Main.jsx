@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Index({title}) {
+function Main({title}) {
   return (
     <Layout>
       <div>
@@ -11,4 +11,4 @@ function Index({title}) {
   );
 }
 
-module.exports = Index;
+module.exports = Main;
