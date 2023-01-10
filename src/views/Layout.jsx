@@ -63,7 +63,9 @@ function Layout({ children, user }) {
                 </div>
               </div>
             </div>
-        </nav>
+          </nav>
+          )}
+
         <div className="container d-flex flex-row">{children}</div>
 
         <footer className="bg-light text-center text-lg-start footer">
