@@ -77,7 +77,16 @@ function Cabinet() {
             </div>
           </div>
           <div className="col">
-
+            <div className="card">
+              <img src="https://mtgsale.ru/cardImage/M19/RUS/296.jpg" className="card-img-top" alt="..." />
+              <div className="card-body">
+                <p className="card-text">Наименование:</p>
+                <p className="card-text">Цена:</p>
+                <p className="card-text">Состояние:</p>
+                <p className="card-text">Где находится:</p>
+                <button type="submit" name="delCard" className="btn btn-primary">Удалить карточку</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

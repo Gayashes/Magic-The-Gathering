@@ -4,11 +4,13 @@
     margin-right: auto;
     margin-left: auto;
   }
-  .footer {
+.footer {
     bottom: 0px;
     position: fixed;
     width: 100%;
     text-align: center;
+    background-color: bisque;
+    color: blueviolet;
   }
 
   .cabinetMine {
@@ -55,3 +57,10 @@
       width: 1170px;
     }
   }
+  .cardAll {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  
+  }
+  
