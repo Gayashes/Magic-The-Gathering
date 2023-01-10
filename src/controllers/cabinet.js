@@ -4,7 +4,8 @@ const { Card, User } = require('../../db/models');
 
 const renderCabinet = (req, res) => {
   try {
-    render(Cabinet, null, res);
+    const user = req.session?.userName;
+    render(Cabinet, { user }, res);
   } catch (error) {
     console.log(error);
   }

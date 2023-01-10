@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Cabinet() {
+function Cabinet({ user }) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div className="cabinetMine">
       <div>
         <h2>Добавить карточку на продажу</h2>
