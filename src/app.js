@@ -47,7 +47,7 @@ app.use(express.json());
 app.use('/', mainRoutes);
 app.use('/registration', registrationRoutes);
 app.use('/login', loginRoutes);
-app.use('/logout', logoutRoutes)
+app.use('/logout', logoutRoutes);
 
 app.listen(PORT, (err) => {
   if (err) return console.log('Ошибка запуска сервера.', err.message);
