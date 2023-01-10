@@ -28,7 +28,7 @@ route.get('/', async (req, res) => {
   ];
   const user = req.session?.userName;
   console.log('111111', allCard);
-  render(Main, { allCard }, res);
+  render(Main, { allCard, user }, res);
 });
 
 module.exports = route;
