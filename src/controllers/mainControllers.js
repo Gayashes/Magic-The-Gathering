@@ -42,7 +42,6 @@ const renderHome = async (req, res) => {
   },
   ];
   const user = req.session?.userName;
-  console.log('111111', allCard);
   render(Main, { allCard, user }, res);
 };
 
