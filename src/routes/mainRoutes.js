@@ -4,10 +4,6 @@ const route = express.Router();
 const { Card } = require('../../db/models');
 const render = require('../lib/render');
 const Main = require('../views/Main');
-<<<<<<< HEAD
-route.get('/', (req, res) => {
-  render(Main, null, res);
-=======
 
 route.get('/', async (req, res) => {
   // const allCard = await Card.findAll();
@@ -51,7 +47,6 @@ route.get('/', async (req, res) => {
   const user = req.session?.userName;
   console.log('111111', allCard);
   render(Main, { allCard, user }, res);
->>>>>>> a10e5dec3b39843cb18c231e9cd4c23245bf8e20
 });
 
 module.exports = route;

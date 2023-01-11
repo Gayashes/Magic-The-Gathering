@@ -19,39 +19,9 @@ function Layout({ children, user }) {
       </head>
       <body>
         { user ? (
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-              <div className="container-fluid">
-                <a className="navbar-brand">
-                  <img src="/images/download.png" width="60" height="50" />
-                </a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon" />
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div className="navbar-nav">
-                    <a className="nav-link" aria-current="page" href="/cabinet">
-                      Ваш личный кабинет,
-                      {user}
-                    </a>
-                  </div>
-                  <div className="navbar-nav">
-                    <a className="nav-link" aria-current="page" href="/logout">
-                      Выйти
-                    </a>
-                  </div>
-                  <div className="navbar-nav">
-                    <a className="nav-link" aria-current="page" href="#">
-                      Корзина
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </nav>
-        )
-          : (
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-              <a className="navbar-brand">
+              <a className="navbar-brand" href="/">
                 <img src="/images/download.png" width="60" height="50" />
               </a>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,14 +29,44 @@ function Layout({ children, user }) {
               </button>
               <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                  <a className="nav-link" aria-current="page" href="/login">Присоединяйся к миру магии!</a>
+                  <a className="nav-link" aria-current="page" href="/cabinet">
+                    Ваш личный кабинет,
+                    {user}
+                  </a>
+                </div>
+                <div className="navbar-nav">
+                  <a className="nav-link" aria-current="page" href="/logout">
+                    Выйти
+                  </a>
+                </div>
+                <div className="navbar-nav">
+                  <a className="nav-link" aria-current="page" href="#">
+                    Корзина
+                  </a>
                 </div>
               </div>
             </div>
           </nav>
+        )
+          : (
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+              <div className="container-fluid">
+                <a className="navbar-brand" href="/">
+                  <img src="/images/download.png" width="60" height="50" />
+                </a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span className="navbar-toggler-icon" />
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div className="navbar-nav">
+                    <a className="nav-link" aria-current="page" href="/login">Присоединяйся к миру магии!</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
           )}
 
-        <div className="container d-flex flex-row row row-cols-1 row-cols-md-3 g-4">{children}</div>
+        <div className="container">{children}</div>
 
         <footer className="bg-light text-center text-lg-start footer">
           <div className="text-center p-3">
