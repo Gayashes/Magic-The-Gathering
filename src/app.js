@@ -19,7 +19,7 @@ const sessionConfig = {
   resave: false,
   saveUninitialized: false,
   cookie: {
-    maxAge: 99999999,
+    maxAge: 99999999 * 24 * 60,
     httpOnly: true,
   },
 };
@@ -36,7 +36,7 @@ const registrationRoutes = require('./routes/registrationRoute');
 const loginRoutes = require('./routes/loginRoutes');
 const logoutRoutes = require('./routes/logoutRoutes');
 const cabinetRoutes = require('./routes/cabinetRoutes');
-
+const basketRoutes = require('./routes/basketRoutes');
 // вызов функции проверки соединения с базоый данных
 dbCheck();
 
@@ -51,6 +51,7 @@ app.use('/registration', registrationRoutes);
 app.use('/login', loginRoutes);
 app.use('/logout', logoutRoutes);
 app.use('/cabinet', cabinetRoutes);
+app.use('/basket', basketRoutes);
 
 app.listen(PORT, (err) => {
   if (err) return console.log('Ошибка запуска сервера.', err.message);

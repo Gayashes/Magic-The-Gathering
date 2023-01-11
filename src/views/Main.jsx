@@ -24,7 +24,7 @@ function Main({ allCard, user }) {
                     <a href={`/${card.id}`}><h6 className="text-center">{card.title}</h6></a>
                     <img src={card.link} className="card-img-top cardimg" alt="card-img" />
                     <h5 className="text-center">{card.status }</h5>
-                    <button type="submit" className="btn btn-primary center-block btnBuy">Добавить в корзину</button>
+                    <button type="click" className="btn btn-primary center-block btnBuy">Добавить в корзину</button>
                   </div>
                 </div>
               </div>
