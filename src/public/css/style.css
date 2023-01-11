@@ -107,10 +107,7 @@
   
 }
 .hide {
-  opacity: 1;
-  animation-name: a1;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
+  display: none ;
 
 }
 @keyframes a1{
@@ -123,6 +120,11 @@
     border: 0;
   }
 
+}
+
+.cardOne {
+  width: 90%;
+  height: 80%;
 }
 
 

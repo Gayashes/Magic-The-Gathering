@@ -4,9 +4,9 @@ const Layout = require('./Layout');
 function OnecardMain({ user, oneCard }) {
   return (
     <Layout user={user}>
-      <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-around row-cols-1 row-cols-md-2 g-4 cardAll">
+      <div className="bd-highlight d-flex justify-content-center row-cols-1 align-items-center cardOne">
               <div className="col-sm-6 ">
-                <div className="card maincardAll">
+                <div className="card cardOne ">
                   <div className="card-body cardbody mainCards">
                     <img src={oneCard.link} className="card-img-top cardimg" alt="card-img" />
                     <h5 className="text-center">{oneCard.status }</h5>
