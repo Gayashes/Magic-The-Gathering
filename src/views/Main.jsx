@@ -5,20 +5,21 @@ const Layout = require('./Layout');
 function Main({ allCard, user }) {
   return (
     <Layout user={user}>
-      {allCard.map((card) => (
-       <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-around row row-cols-1 row-cols-md-2 g-4 cardAll">
-       <div className="col-sm-6">
-         <div className="card">
-           <div className="card-body">
-           <img src={card.link} className="card-img-top cardimg" />
-             <h5 className="text-center">{card.status }</h5>
-             <a href={`/${card.id}`}><h6 className="text-center">{card.title}</h6></a>
-           </div>
-         </div>
-       </div>
-     </div>
-      ))}
-
+      <div className="d-flex flex-row row row-cols-1 row-cols-md-3 g-4">
+        {allCard.map((card) => (
+          <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-around row row-cols-1 row-cols-md-2 g-4 cardAll">
+            <div className="col-sm-6">
+              <div className="card">
+                <div className="card-body">
+                  <img src={card.link} className="card-img-top cardimg" />
+                  <h5 className="text-center">{card.status }</h5>
+                  <a href={`/${card.id}`}><h6 className="text-center">{card.title}</h6></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </Layout>
   );
 }
