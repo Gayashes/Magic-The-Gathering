@@ -1,9 +1,35 @@
+/* eslint-disable no-param-reassign */
+const f = require('session-file-store');
+
 const btnBuy = document.querySelector('#cardForm');
+const delBtn = document.querySelectorAll('.busketdelete');
 
-console.log(btnBuy);
-
-btnBuy.addEventListener('click', async (event) => {
-  event.preventDefault();
+function insertMark(string, pos, len) {
+  return `${string.slice(0, pos)}<mark>${string.slice(pos, pos + len)}</mark>${string.slice(pos + len)}`;
+}
+document.querySelector('.cities').oninput = function () {
+  const val = this.value.trim();
+  const cityname = document.querySelectorAll('#cities');
+  if (val != '') {
+    cityname.forEach((elem) => {
+      if (elem.innerText.search(val) === -1) {
+        elem.classList.add('hide');
+        elem.innerHTML = elem.innerText;
+      } else {
+        elem.classList.remove('hide');
+        const str = elem.innerText;
+        elem.innerHTML = insertMark(str, elem.innerText.search(val), val.length);
+      }
+    });
+  }
+  else {
+    cityname.forEach((elem) => {
+      elem.classList.remove('hide');
+      elem.innerHTML = elem.innerText;
+    })
+  } 
+};
+btnBuy?.addEventListener('click', async (event) => {
   const card_id = event.target.id;
   const user_id = event.target.dataset.userid;
 
@@ -15,7 +41,6 @@ btnBuy.addEventListener('click', async (event) => {
     body: JSON.stringify({ user_id, card_id }),
   });
   const post = await response.json();
-
 });
 
 /*
@@ -52,3 +77,10 @@ document.querySelector('.search').oninput = function () {
   }
 };
 
+delBtn?.addEventListener('click', (e) => {
+  const val = e.target.getAttribute('data-userid');
+  fetch(`/basket/${val}`, {
+    method: 'DELETE',
+  })
+    .then((res) => window.location.reload());
+});
