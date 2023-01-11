@@ -40,7 +40,7 @@ function Layout({ children, user }) {
                     </a>
                   </div>
                   <div className="navbar-nav">
-                    <a className="nav-link" aria-current="page" href="#">
+                    <a className="nav-link" aria-current="page" href="/basket">
                       Корзина
                     </a>
                   </div>
