@@ -5,8 +5,8 @@ const Layout = require('./Layout');
 function Main({ allCard, user }) {
   return (
     <Layout user={user}>
-    <label htmlFor="exampleInputURL" className="form-label filter" ></label>
-      <select name="filter" className="form-select filter" aria-label="Default select example" placeholder="Фильтровать">
+    <label htmlFor="exampleInputURL" className="form-label filter" key="filter-label"></label>
+      <select className="form-select filter" aria-label="Default select example" key="filter" placeholder="Фильтровать">
         <option selected>Фильтровать</option>
         <option value="1">Москва</option>
         <option value="2">Рига</option>

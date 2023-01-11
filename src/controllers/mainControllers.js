@@ -1,49 +1,22 @@
 const render = require('../lib/render');
 const Main = require('../views/Main');
+const MainNoCard = require('../views/MainNoCard');
 const { Card } = require('../../db/models');
 
 const renderHome = async (req, res) => {
-  // const allCard = await Card.findAll();
-  const allCard = [{
-    link: 'https://pepelsbey.net/pres/web-in-curves/pictures/hypnotoad.png',
-    title: '2',
-    status: true,
-    id: 1,
-  },
-  {
-    link: 'https://pepelsbey.net/pres/web-in-curves/pictures/hypnotoad.png',
-    title: '21',
-    status: true,
-    id: 1,
-  },
-  {
-    link: 'https://pepelsbey.net/pres/web-in-curves/pictures/hypnotoad.png',
-    title: '211',
-    status: true,
-    id: 1,
-  },
-  {
-    link: 'https://pepelsbey.net/pres/web-in-curves/pictures/hypnotoad.png',
-    title: '211',
-    status: true,
-    id: 1,
-  },
-  {
-    link: 'https://pepelsbey.net/pres/web-in-curves/pictures/hypnotoad.png',
-    title: '211',
-    status: true,
-    id: 1,
-  },
-  {
-    link: 'https://pepelsbey.net/pres/web-in-curves/pictures/hypnotoad.png',
-    title: '211',
-    status: true,
-    id: 1,
-  },
-  ];
-  const user = req.session?.userName;
-  console.log('111111', allCard);
-  render(Main, { allCard, user }, res);
+
+  try {
+    const allCard = await Card.findAll();
+    const user = req.session?.userName;
+    if (allCard.length) {
+      render(Main, { allCard, user }, res);
+    } else {
+      render(MainNoCard, { allCard, user }, res);
+    }
+  } catch (error) {
+    res.send(`Error ------> ${error}`);
+  }
+
 };
 
 module.exports = renderHome;
