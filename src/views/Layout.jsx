@@ -15,10 +15,40 @@ function Layout({ children, user }) {
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossOrigin="anonymous" />
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossOrigin="anonymous" />
         <link rel="stylesheet" href="/css/style.css" />
-
+        <script defer src="/js/application.js" />
       </head>
       <body>
         { user ? (
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+              <div className="container-fluid">
+                <a className="navbar-brand" href="/">
+                  <img src="/images/download.png" width="60" height="50" />
+                </a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span className="navbar-toggler-icon" />
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div className="navbar-nav">
+                    <a className="nav-link" aria-current="page" href="/cabinet">
+                      Ваш личный кабинет,
+                      {user}
+                    </a>
+                  </div>
+                  <div className="navbar-nav">
+                    <a className="nav-link" aria-current="page" href="/logout">
+                      Выйти
+                    </a>
+                  </div>
+                  <div className="navbar-nav">
+                    <a className="nav-link" aria-current="page" href="/basket">
+                      Корзина
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+        )
+          : (
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
               <a className="navbar-brand" href="/">
@@ -71,7 +101,6 @@ function Layout({ children, user }) {
         <footer className="bg-light text-center text-lg-start footer">
           <div className="text-center p-3">
             <p> Наши контактные данные </p>
-            <a className="firstcode" href="https://elbrusboot.camp/" style={{ color: 'rgba(237, 195, 60, 0.872)' }}>Elbrus 2022</a>
           </div>
         </footer>
       </body>
