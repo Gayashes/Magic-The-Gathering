@@ -4,6 +4,7 @@ const Login = require('../views/Login');
 const { User } = require('../../db/models');
 
 const renderLogin = (req, res) => {
+  console.log('111111');
   render(Login, null, res);
 };
 

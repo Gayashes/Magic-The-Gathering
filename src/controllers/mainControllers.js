@@ -16,7 +16,6 @@ const renderHome = async (req, res) => {
   } catch (error) {
     res.send(`Error ------> ${error}`);
   }
-
 };
 const renserOneCardMain = async (req, res) => {
   try {
