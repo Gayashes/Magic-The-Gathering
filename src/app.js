@@ -35,6 +35,8 @@ const mainRoutes = require('./routes/mainRoutes');
 const registrationRoutes = require('./routes/registrationRoute');
 const loginRoutes = require('./routes/loginRoutes');
 const logoutRoutes = require('./routes/logoutRoutes');
+const cabinetRoutes = require('./routes/cabinetRoutes');
+
 // вызов функции проверки соединения с базоый данных
 dbCheck();
 
@@ -47,7 +49,8 @@ app.use(express.json());
 app.use('/', mainRoutes);
 app.use('/registration', registrationRoutes);
 app.use('/login', loginRoutes);
-app.use('/logout', logoutRoutes)
+app.use('/logout', logoutRoutes);
+app.use('/cabinet', cabinetRoutes);
 
 app.listen(PORT, (err) => {
   if (err) return console.log('Ошибка запуска сервера.', err.message);
