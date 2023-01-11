@@ -1,9 +1,14 @@
 const render = require('../lib/render');
-const Cabinet = require('../views/Cabinet');
-const { Basket } = require('../../db/models');
+const Basket = require('../views/Basket');
+// const { User } = require('../../db/models');
 
 const renderBasket = (req, res) => {
-  render(Basket, null, res);
+  try {
+    const user = req.session?.userName;
+    render(Basket, { user }, res);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 module.exports = renderBasket;

@@ -15,7 +15,7 @@ function Layout({ children, user }) {
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossOrigin="anonymous" />
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossOrigin="anonymous" />
         <link rel="stylesheet" href="/css/style.css" />
-
+        <script defer src="/js/application.js" />
       </head>
       <body>
         { user ? (
@@ -71,7 +71,6 @@ function Layout({ children, user }) {
         <footer className="bg-light text-center text-lg-start footer">
           <div className="text-center p-3">
             <p> Наши контактные данные </p>
-            <a className="firstcode" href="https://elbrusboot.camp/" style={{ color: 'rgba(237, 195, 60, 0.872)' }}>Elbrus 2022</a>
           </div>
         </footer>
       </body>
