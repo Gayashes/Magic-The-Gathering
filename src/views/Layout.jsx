@@ -21,7 +21,7 @@ function Layout({ children, user }) {
         { user ? (
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
               <div className="container-fluid">
-                <a className="navbar-brand">
+                <a className="navbar-brand" href="/">
                   <img src="/images/download.png" width="60" height="50" />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@ function Layout({ children, user }) {
           : (
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-              <a className="navbar-brand">
+              <a className="navbar-brand" href="/">
                 <img src="/images/download.png" width="60" height="50" />
               </a>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +66,7 @@ function Layout({ children, user }) {
           </nav>
           )}
 
-        <div className="container ">{children}</div>
+        <div className="container">{children}</div>
 
         <footer className="bg-light text-center text-lg-start footer">
           <div className="text-center p-3">
