@@ -27,6 +27,7 @@ function Main({ allCard, user }) {
                     <h5 className="text-center">{card.status }</h5>
                     <a href={`/${card.id}`} className="cardtitle">{card.title}</a>
                     <h5 className="text-center">{card.location}</h5>
+                    <h5 className="text-center">Стоимость:{card.cost}$</h5>
                     <button type="click" className="btn btn-secondary center-block btnBuy">Добавить в корзину</button>
                   </div>
                 </div>
@@ -44,6 +45,7 @@ function Main({ allCard, user }) {
                     <img src={card.link} className="card-img-top cardimg" alt="card-img" />
                     <h5 className="text-center">{card.status }</h5>
                     <a href={`/${card.id}`} className="cardtitle">{card.title}</a>
+                    <h5 className="text-center">{card.location}</h5>
                   </div>
                 </div>
               </div>
