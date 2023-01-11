@@ -30,7 +30,7 @@ document.querySelector('.search').oninput = function () {
   const searchCard = document.querySelectorAll('.cardAll div');
   if (searchCard !== '') {
     searchCard.forEach((element) => {
-      if (element.innerText.search(value) === -1) {
+      if (element.innerText.search((RegExp(value, 'gi'))) === -1) {
         element.classList.add('hide');
       } else {
         element.classList.remove('hide');
