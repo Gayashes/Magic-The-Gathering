@@ -5,15 +5,22 @@
     margin-left: auto;
     margin-bottom: 400px;
   }
+  .container-fluid {
+    background: linear-gradient(rgba(0, 0, 0, 0.82),rgba(77, 19, 19, 0.864), ) 
+  }
 .footer {
     bottom: 0px;
     position: fixed;
     width: 100%;
     text-align: center;
-    background-color: bisque;
-    color: blueviolet;
+    background: linear-gradient(rgba(77, 19, 19, 0.864), rgba(0, 0, 0, 0.82))
   }
-
+  body {
+    background-size: 90%;
+    background-image: url("/images/image.jpg");
+    margin: 0px;
+  
+  }
   .cabinetMine {
     display: flex;
     flex-direction: row;
