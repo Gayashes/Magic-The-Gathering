@@ -8,6 +8,7 @@ const renderHome = async (req, res) => {
   try {
     const allCard = await Card.findAll();
     const user = req.session?.userName;
+
     if (allCard.length) {
       render(Main, { allCard, user }, res);
     } else {
@@ -16,6 +17,7 @@ const renderHome = async (req, res) => {
   } catch (error) {
     res.send(`Error ------> ${error}`);
   }
+
 };
 const renserOneCardMain = async (req, res) => {
   try {
@@ -26,6 +28,7 @@ const renserOneCardMain = async (req, res) => {
   } catch (error) {
     res.send(`Error ------> ${error}`);
   }
+
 };
 
 module.exports = {

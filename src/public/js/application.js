@@ -1,29 +1,38 @@
-// const btnBuy = document.querySelectorAll('.btnBuy');
-// console.log(btnBuy);
-// btnBuy?.addEventListener('click', async (event) => {
-//   const btnid = event.target.id;
-//   console.log(btnid);
-//   // const response = await fetch('/basket' {
-//   //     method: 'PUT',
-//   //     headers: { 'Content-Type: application/json'},
-//   //     body: JSON.stringify({ btnid })
-//   // })
-//   // const responseJson = await response.json();
-// });
+const btnBuy = document.querySelector('#cardForm');
 
-// const filterCity = document.querySelectorAll('.maincardAll');
-// const city = document.querySelector('.cities');
-// city.addEventListener('click', async (event) => {
-//   const filterClass = event.target.dataset['cardid'];
-//   console.log(filterClass);
+console.log(btnBuy);
 
-//   filterCity.forEach(elem => {
-//     elem.classList.remove('hide')
-//     if (!elem.classList.contains(filterClass)){
-//     elem.classList.add('hide')
-//   }
-// })
-// })
+btnBuy.addEventListener('click', async (event) => {
+  event.preventDefault();
+  const card_id = event.target.id;
+  const user_id = event.target.dataset.userid;
+
+  console.log(card_id, user_id);
+
+  const response = await fetch('/basket', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ user_id, card_id }),
+  });
+  const post = await response.json();
+
+});
+
+/*
+const filterCity = document.querySelectorAll('.maincardAll');
+const city = document.querySelector('.cities');
+city.addEventListener('click', async (event) => {
+  const filterClass = event.target.dataset.cardid;
+  console.log(filterClass);
+
+  filterCity.forEach((elem) => {
+    elem.classList.remove('hide');
+    if (!elem.classList.contains(filterClass)) {
+      elem.classList.add('hide');
+    }
+  });
+});
+*/
 
 document.querySelector('.search').oninput = function () {
   const value = this.value.trim();
@@ -42,3 +51,4 @@ document.querySelector('.search').oninput = function () {
     });
   }
 };
+

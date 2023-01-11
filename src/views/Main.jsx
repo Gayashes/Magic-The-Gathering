@@ -17,6 +17,7 @@ function Main({ allCard, user }) {
       </datalist>
       <input type="title" name="title" className="form-control search" id="exampleInputTitle" placeholder="Поиск" />
       {user ? (
+        <form method='POST' action="/basket" id="cardForm">
         <div className="d-flex flex-row row row-cols-2 row-cols-md-5 g-2 g-lg-3 ">
           {allCard.map((card) => (
             <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-around row-cols-1 row-cols-md-2 g-4 cardAll">
@@ -27,14 +28,17 @@ function Main({ allCard, user }) {
                     <h5 className="text-center">{card.status }</h5>
                     <a href={`/onecard/${card.id}`} className="cardtitle">{card.title}</a>
                     <h5 className="text-center">{card.location}</h5>
+
+                    <button id={card.id} data-userid={ card.user_id } type="click" className="btn btn-secondary center-block btnBuy">Добавить в корзину</button>
+
                     <h5 className="text-center">Стоимость:{card.cost}$</h5>
-                    <button type="click" className="btn btn-secondary center-block btnBuy">Добавить в корзину</button>
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
+        </form>
       ) : (
         <div className="d-flex flex-row row row-cols-2 row-cols-md-5 g-2 g-lg-3">
           {allCard.map((card) => (
