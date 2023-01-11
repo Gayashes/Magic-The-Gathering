@@ -59,7 +59,9 @@ const saveCabinet = async (req, res) => {
     console.log('=================', title, cost, link, description, condition, id);
 
     // eslint-disable-next-line max-len
-    await Card.update({ title, cost, link, description, condition, status: true }, { where: { id } });
+    await Card.update({
+      title, cost, link, description, condition, status: true,
+    }, { where: { id } });
     res.redirect('/cabinet');
   } catch (error) {
     console.log('ERROR SAVE==>', error);
