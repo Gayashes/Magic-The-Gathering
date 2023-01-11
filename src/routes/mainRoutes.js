@@ -7,6 +7,6 @@ const {
 } = require('../controllers/mainControllers');
 
 route.get('/', renderHome);
-route.get('/:id', renserOneCardMain);
+route.get('/onecard/:id', renserOneCardMain);
 
 module.exports = route;
