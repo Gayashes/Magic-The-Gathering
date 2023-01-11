@@ -2,9 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
-const basketControllers = require('../controllers/basketControllers');
+const { renderBasket, postBasket } = require('../controllers/basketControllers');
 
-
-router.get('/', basketControllers);
+router.get('/', renderBasket);
+router.post('/', postBasket);
 
 module.exports = router;

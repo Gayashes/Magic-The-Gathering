@@ -4,10 +4,10 @@ const MainNoCard = require('../views/MainNoCard');
 const { Card } = require('../../db/models');
 
 const renderHome = async (req, res) => {
-
   try {
     const allCard = await Card.findAll();
     const user = req.session?.userName;
+
     if (allCard.length) {
       render(Main, { allCard, user }, res);
     } else {
@@ -16,7 +16,6 @@ const renderHome = async (req, res) => {
   } catch (error) {
     res.send(`Error ------> ${error}`);
   }
-
 };
 
 module.exports = renderHome;

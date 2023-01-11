@@ -55,9 +55,6 @@ const saveCabinet = async (req, res) => {
     const {
       title, cost, link, description, condition,
     } = req.body;
-
-    console.log('=================', title, cost, link, description, condition, id);
-
     // eslint-disable-next-line max-len
     await Card.update({
       title, cost, link, description, condition, status: true,
