@@ -22,7 +22,7 @@ function Basket({ user, userBasket }) {
                     <div className="card-body cardbody mainCards">
                       <img src={card.Card.link} className="card-img-top cardimg" alt="card-img" />
                       <h5 className="text-center">{card.Card.status }</h5>
-                      <a href={`/${card.Card.id}`} className="cardtitle">{card.Card.title}</a>
+                      <a href={`/onecard/${card.Card.id}`} className="cardtitle">{card.Card.title}</a>
                       <h5 className="text-center">{card.Card.location}</h5>
                     </div>
                     <button id={card.id} data-userid={card.user_id} type="click" className="btn btn-outline-danger busketdelete">
@@ -35,10 +35,12 @@ function Basket({ user, userBasket }) {
               </div>
             ))}
           </div>
-        </div>
-        <button type="button" className="btn-success">Оформить заказ</button>
-      </div>
 
+        </div>
+      </div>
+      <form method="POST" action="/order">
+        <a style={{ marginTop: 20, marginRight: 20 }} href="/order" className="btn btn-warning">Оформить заказ</a>
+      </form>
     </Layout>
   );
 }

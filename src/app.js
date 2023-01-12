@@ -6,6 +6,24 @@ const app = express();
 const morgan = require('morgan');
 const path = require('path');
 
+const nodemailer = require('nodemailer');
+
+const transporter = nodemailer.createTransport({
+  host: 'smtp.inbox.ru',
+  port: 465,
+  secure: true,
+  auth: {
+    user: 'testovaya1@inbox.ru', // от него
+    pass: 'UxsgmxZm9zNX5d3pzeSC', //
+  },
+});
+module.exports = function mailer(message) {
+  transporter.sendMail(message, (err, info) => {
+    if (err) return console.log(err);
+    console.log('письмо ушло', info);
+  });
+};
+
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
@@ -37,6 +55,7 @@ const loginRoutes = require('./routes/loginRoutes');
 const logoutRoutes = require('./routes/logoutRoutes');
 const cabinetRoutes = require('./routes/cabinetRoutes');
 const basketRoutes = require('./routes/basketRoutes');
+const orderRoutes = require('./routes/orderRouses');
 // вызов функции проверки соединения с базоый данных
 dbCheck();
 
@@ -52,6 +71,7 @@ app.use('/login', loginRoutes);
 app.use('/logout', logoutRoutes);
 app.use('/cabinet', cabinetRoutes);
 app.use('/basket', basketRoutes);
+app.use('/order', orderRoutes);
 
 app.listen(PORT, (err) => {
   if (err) return console.log('Ошибка запуска сервера.', err.message);

@@ -15,6 +15,8 @@ const regUser = async (req, res) => {
     });
     req.session.userName = newUser.name;
     req.session.userId = newUser.id;
+    req.session.location = newUser.city;
+    req.session.email = newUser.email;
     req.session.save(() => {
       res.redirect('/');
     });

@@ -1,13 +1,13 @@
 const render = require('../lib/render');
 const basket = require('../views/Basket');
-const { Card, Basket } = require('../../db/models');
+const { Card, Basket, User } = require('../../db/models');
 
 const renderBasket = async (req, res) => {
   try {
     const user_id_buy = req.session.userId;
-    console.log('============', user_id_buy);
-    const userBasket = await Basket.findAll({ where: { user_id_buy }, include: Card });
 
+    const userBasket = await Basket.findAll({ where: { user_id_buy }, include: Card });
+    
     const user = req.session?.userName;
     render(basket, { user, userBasket }, res);
   } catch (error) {

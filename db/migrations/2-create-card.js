@@ -20,12 +20,20 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true,
       },
+      location: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      email: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
       condition: {
         type: Sequelize.STRING,
         allowNull: true,
       },
       description: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(5000),
         allowNull: true,
       },
       status: {
