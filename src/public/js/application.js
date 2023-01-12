@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 const ordBtn = document.querySelector('#orderBtn');
 const btnBuy = document.querySelector('#cardForm');
+console.log(btnBuy);
 const delBtn = document.querySelector('#basketcardForm');
 
 // СКРИПТ ОТПРАВКИ ПИСЬМА
@@ -13,21 +14,14 @@ ordBtn?.addEventListener('click', (event) => {
 
 // ФЕТЧ УДАЛЕНИЯ КАРТОЧКИ ИЗ КОРЗИНЫ
 
-// console.log(delBtn);
 delBtn?.addEventListener('click', async (e) => {
-  
-  // const val = e.target.classlist.contains('busketdelete');
   const card_id = e.target.id;
-  // console.log('val', val);
   if (e.target.tagName === 'BUTTON') {
-    console.log('@@@@@@@@@', e.target);
     e.target.closest('.maincardAll').remove();
     await fetch(`/basket/delete/${card_id}`, {
       method: 'POST',
     });
   }
-  // const user_id = e.target.dataset.userid;
-  // console.log(val);
 });
 
 // ФЕТЧ ДОБАВЛЕННИЯ КАРТОЧКИ В КОРЗИНУ ИЗ МЭЙНА
@@ -35,13 +29,17 @@ delBtn?.addEventListener('click', async (e) => {
 btnBuy?.addEventListener('click', async (event) => {
   const card_id = event.target.id;
   const user_id = event.target.dataset.userid;
-
-  const response = await fetch('/basket', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ user_id, card_id }),
-  });
-  const post = await response.json();
+  if (event.target.tagName === 'BUTTON') {
+    console.log('============+++айдишники', card_id, user_id);
+    event.target.innerText = 'ДОБАВЛЕНО';
+    event.target.disabled = true;
+    const response = await fetch('/basket', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_id, card_id }),
+    });
+    const post = await response.json();
+  }
 });
 
 // const filterCity = document.querySelectorAll('.maincardAll');
