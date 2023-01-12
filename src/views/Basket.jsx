@@ -6,7 +6,7 @@ const Layout = require('./Layout');
 function Basket({ user, userBasket }) {
   return (
     <Layout user={user}>
-
+    <link rel="stylesheet" defer href="/css/basket.css" /> 
       <div className="basket">
         <h1>
           Отличный выбор,

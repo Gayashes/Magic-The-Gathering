@@ -4,6 +4,7 @@ const Layout = require('./Layout');
 function Onecard({ user, oneCard }) {
   return (
     <Layout user={user}>
+      
       <div className="cabinetMine">
         <div>
           <div className="cabitetInput">

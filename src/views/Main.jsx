@@ -18,9 +18,9 @@ function Main({ allCard, user }) {
       <input type="title" name="title" className="form-control search" id="exampleInputTitle" placeholder="Поиск" />
       {user ? (
         <form method="POST" action="/basket" id="cardForm">
-          <div className="d-flex flex-row row row-cols-2 row-cols-md-5 g-2 g-lg-3 ">
+          <div className="content d-flex flex-row row row-cols-2 row-cols-md-5 g-2 g-lg-3 ">
             {allCard.map((card) => (
-              <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-around row-cols-1 row-cols-md-2 g-4 cardAll">
+              <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-b row-cols-1 row-cols-md-2 g-4 cardAll">
                 <div className="col-sm-6 ">
                   <div className="card maincardAll">
                     <div className="card-body cardbody mainCards">
@@ -28,12 +28,12 @@ function Main({ allCard, user }) {
                         <img src={card.link} className="card-img-top cardimg" alt="card-img" />
                       </a>
                       <h5 className="text-center">{card.status }</h5>
-                      <a href={`/onecard/${card.id}`} className="cardtitle">{card.title}</a>
+                      <a href={`/onecard/${card.id}`} className="cardtitle" style={{ color:'#af8b4c' }}>{card.title}</a>
                       <h5 className="text-center">{card.location}</h5>
                       { card.status ? (
-                        <button id={card.id} data-userid={card.user_id} type="click" className="btn btn-success center-block btnBuy">Добавить в корзину</button>
+                        <button id={card.id} data-userid={card.user_id} type="click" className="btn center-block btnBuy">Добавить в корзину</button>
                       ) : (
-                        <button id={card.id} data-userid={card.user_id} type="click" className="btn btn-warning center-block btnBuy" disabled="true" >ДОБАВЛЕНО</button>
+                        <button id={card.id} data-userid={card.user_id} type="click" className="btn center-block btnBuy" disabled="true" >Добавлено</button>
                         ) }
                       <h5 className="text-center">
                         Стоимость:
@@ -48,9 +48,9 @@ function Main({ allCard, user }) {
           </div>
         </form>
       ) : (
-        <div className="d-flex flex-row row row-cols-2 row-cols-md-5 g-2 g-lg-3">
+        <div className="content d-flex flex-row row row-cols-2 row-cols-md-5 g-2 g-lg-3">
           {allCard.map((card) => (
-            <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-around row-cols-1 row-cols-md-2 g-4 cardAll">
+            <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-between row-cols-1 row-cols-md-2 g-4 cardAll">
               <div className="col-sm-6">
                 <div className="card maincardAll">
                   <div className="card-body cardbody mainCards">
@@ -58,7 +58,7 @@ function Main({ allCard, user }) {
                       <img src={card.link} className="card-img-top cardimg" alt="card-img" />
                     </a>
                     <h5 className="text-center">{card.status }</h5>
-                    <a href={`/onecard/${card.id}`} className="cardtitle">{card.title}</a>
+                    <a href={`/onecard/${card.id}`} className="cardtitle" style={{ color:'#af8b4c' }}>{card.title}</a>
                     <h5 className="text-center">{card.location}</h5>
                     <h5 className="text-center">
                       Стоимость:

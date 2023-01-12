@@ -4,11 +4,12 @@ const Layout = require('./Layout');
 function OnecardMain({ user, oneCard }) {
   return (
     <Layout user={user}>
-      <div className="bd-highlight d-flex justify-content-center row-cols-1 align-items-center cardOne">
-              <div className="col-sm-6 ">
+      <link rel="stylesheet" defer href="/css/cardOne.css" />
+      <div className="containerOne bd-highlight d-flex justify-content-between row-cols-1  cardOne">
+              <div className="containerOne col-sm-6">
                 <div className="card cardOne ">
-                  <div className="card-body cardbody mainCards">
                     <img src={oneCard.link} className="card-img-top cardimg" alt="card-img" />
+                  <div className="card-body cardbody mainCards">
                     <h5 className="text-center">{oneCard.status }</h5>
                     <h5 className="card-title">{oneCard.title}</h5>
                     <h5 className="text-center">{oneCard.location}</h5>
