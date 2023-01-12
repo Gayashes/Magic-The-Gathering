@@ -27,21 +27,27 @@ btnBuy?.addEventListener('click', async (event) => {
   const post = await response.json();
 });
 
-document.querySelector('.search').oninput = function () {
-  const value = this.value.trim();
-  const searchCard = document.querySelectorAll('.cardAll div');
-  if (searchCard !== '') {
-    searchCard.forEach((element) => {
-      if (element.innerText.search((RegExp(value, 'gi'))) === -1) {
-        element.classList.add('hide');
-        element.classList.add('hide');
-      } else {
-        element.classList.remove('hide');
-      }
-    });
-  } else {
-    searchCard.forEach((element) => {
-      element.classList.remove('hide');
-    });
-  }
-};
+// const searchCard = document.querySelectorAll('.cardAll div');
+// document.querySelector('.search').oninput = function () {
+//   const value = this.value.trim();
+//   if (searchCard !== '') {
+//     searchCard.forEach((element) => {
+//       if (element.innerText.search((RegExp(value, 'gi'))) === -1) {
+//         element.classList.add('hide');
+//       } else {
+//         element.classList.remove('hide');
+//       }
+//     });
+//   } else {
+//     searchCard.forEach((element) => {
+//       element.classList.remove('hide');
+//     });
+//   }
+// };
+const searchCard = document.querySelectorAll('.cardAll div');
+const statusBuy = document.querySelectorAll('.status');
+if (statusBuy.innerHTML === 'false') {
+  searchCard.forEach((element) => {
+    element.classList.add('hide');
+  });
+}
