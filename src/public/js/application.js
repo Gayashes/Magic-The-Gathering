@@ -45,8 +45,12 @@ btnBuy?.addEventListener('click', async (event) => {
 //   }
 // };
 const searchCard = document.querySelectorAll('.cardAll div');
+console.log(searchCard);
 const statusBuy = document.querySelectorAll('.status');
-if (statusBuy.innerHTML === 'false') {
+console.log(statusBuy);
+console.log(statusBuy.value)
+
+if (statusBuy.status === 'false') {
   searchCard.forEach((element) => {
     element.classList.add('hide');
   });

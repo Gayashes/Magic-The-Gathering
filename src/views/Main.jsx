@@ -33,7 +33,7 @@ function Main({ allCard, user }) {
                       <a className="oneCard" href={`/onecard/${card.id}`}>
                         <img src={card.link} className="card-img-top cardimg" alt="card-img" />
                       </a>
-                      <h5 className="text-center status">{card.status}</h5>
+                      <p className="text-center status">{card.status}</p>
                       <a href={`/onecard/${card.id}`} className="cardtitle">{card.title}</a>
                       <h5 className="text-center">{card.location}</h5>
 

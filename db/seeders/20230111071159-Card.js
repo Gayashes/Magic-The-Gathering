@@ -17,7 +17,7 @@ module.exports = {
       link: 'https://www.goha.ru/s/E:CL/eX/SP0SMskkme.png',
       cost: '4',
       condition: 'плохое',
-      status: true,
+      status: false,
       description: 'кодовство и прочие магические вещи',
       user_id: 1,
       createdAt: new Date(),

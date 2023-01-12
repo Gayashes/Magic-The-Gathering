@@ -29,7 +29,7 @@ const renserOneCardMain = async (req, res) => {
     render(OnecardMain, { user, oneCard }, res);
   } catch (error) {
     render(Error, {
-      message: '111Невозможно отобразить страницу, но мы над этим уже работаем, попробуйте позже',
+      message: '111Невозможно отобразить страницу товаров, но мы над этим уже работаем, попробуйте позже',
       error: {},
     }, res);
   }
@@ -37,15 +37,14 @@ const renserOneCardMain = async (req, res) => {
 const renderMainFilter = async (req, res) => {
   try {
     const { filter } = req.body;
-    
-        // console.log("aaaaaa", filter)
+    // console.log("aaaaaa", filter)
     const user = req.session?.userName;
     const allCard = await Card.findAll({ where: { location: filter }, raw: true });
     // console.log(allCard);
     render(Main, { user, allCard }, res);
   } catch (error) {
     render(Error, {
-      message: '222Невозможно отобразить страницу, но мы над этим уже работаем, попробуйте позже',
+      message: 'Невозможно отобразить страницу фильрации, но мы над этим уже работаем, попробуйте позже',
       error: {},
     }, res);
   }
@@ -62,12 +61,11 @@ const renderSearch = async (req, res) => {
     render(Main, { user, allCard }, res);
   } catch (error) {
     render(Error, {
-      message: '222Невозможно отобразить страницу, но мы над этим уже работаем, попробуйте позже',
+      message: 'Невозможно отобразить страницу поиска, но мы над этим уже работаем, попробуйте позже',
       error: {},
     }, res);
   }
-}
-
+};
 module.exports = {
   renderHome,
   renserOneCardMain,
