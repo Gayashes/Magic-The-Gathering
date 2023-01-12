@@ -23,7 +23,6 @@ const postBasket = async (req, res) => {
   try {
     const user_id_buy = req.session.userId;
     const { user_id, card_id } = req.body;
-    console.log('=================== айдишники', user_id, card_id);
     await Basket.create({ user_id, card_id, user_id_buy });
     res.end();
   } catch (error) {
@@ -32,14 +31,8 @@ const postBasket = async (req, res) => {
 };
 
 const sendlerOrder = async (req, res) => {
-  console.log('======== МЭЙЛЕР');
-
-  const emailSender = await User.findOne({ where: { id: req.session.userId } });
-  console.log('========ОТ КОГО', emailSender.email);
-
   const emailRecipient = await Basket.findAll({ where: { user_id_buy: req.session.userId }, include: Card });
-
-  emailRecipient.forEach((card) => {
+  emailRecipient.forEach(async (card) => {
     const message = {
       from: 'testovaya1@inbox.ru',
       to: card.Card.email,
@@ -47,7 +40,10 @@ const sendlerOrder = async (req, res) => {
       text: `Поздравляем! Вашу карточку ${card.Card.title}, купили за ${card.Card.cost}`, // тест сообщения
     };
     mailer(message);
+    await Card.destroy({ where: { id: card.card_id } });
   });
+  await Basket.destroy({ where: { user_id_buy: req.session.userId } });
+
   res.redirect('/');
 };
 

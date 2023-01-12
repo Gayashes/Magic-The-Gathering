@@ -30,9 +30,11 @@ function Main({ allCard, user }) {
                       <h5 className="text-center">{card.status }</h5>
                       <a href={`/onecard/${card.id}`} className="cardtitle">{card.title}</a>
                       <h5 className="text-center">{card.location}</h5>
-
-                      <button id={card.id} data-userid={card.user_id} type="click" className="btn btn-secondary center-block btnBuy">Добавить в корзину</button>
-
+                      { card.status ? (
+                        <button id={card.id} data-userid={card.user_id} type="click" className="btn btn-success center-block btnBuy">Добавить в корзину</button>
+                      ) : (
+                        <button id={card.id} data-userid={card.user_id} type="click" className="btn btn-warning center-block btnBuy" disabled="true" >ДОБАВЛЕНО</button>
+                        ) }
                       <h5 className="text-center">
                         Стоимость:
                         {card.cost}
