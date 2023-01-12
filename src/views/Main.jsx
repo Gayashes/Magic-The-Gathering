@@ -35,7 +35,6 @@ function Main({ allCard, user }) {
                       ) : (
                         <button id={card.id} data-userid={card.user_id} type="click" className="btn btn-warning center-block btnBuy" disabled="true" >ДОБАВЛЕНО</button>
                         ) }
-
                       <h5 className="text-center">
                         Стоимость:
                         {card.cost}

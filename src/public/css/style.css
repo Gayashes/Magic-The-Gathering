@@ -4,6 +4,9 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 800px;
   }
   .container-fluid {
     background: linear-gradient(rgba(0, 0, 0, 0.82),rgba(77, 19, 19, 0.864), ) 
@@ -16,9 +19,12 @@
     background: linear-gradient(rgba(77, 19, 19, 0.864), rgba(0, 0, 0, 0.82))
   }
   body {
-    background-size: 90%;
+    background-size: auto;
     background-image: url("/images/image.jpg");
     margin: 0px;
+    background-repeat: no-repeat;
+    background-repeat: round;
+    overflow: hidden;
   
   }
   .cabinetMine {
