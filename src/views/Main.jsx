@@ -56,7 +56,7 @@ function Main({ allCard, user }) {
                       <img src={card.link} className="card-img-top cardimg" alt="card-img" />
                     </a>
                     <h5 className="text-center">{card.status }</h5>
-                    <a href={`/${card.id}`} className="cardtitle">{card.title}</a>
+                    <a href={`/onecard/${card.id}`} className="cardtitle">{card.title}</a>
                     <h5 className="text-center">{card.location}</h5>
                     <h5 className="text-center">
                       Стоимость:

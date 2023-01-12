@@ -17,6 +17,8 @@ const loginUser = async (req, res) => {
       if (passCheck) {
         req.session.userName = user.name;
         req.session.userId = user.id;
+        req.session.location = user.city;
+        req.session.email = user.email;
         req.session.save(() => {
           res.redirect('/');
         });

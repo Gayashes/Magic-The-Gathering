@@ -1,4 +1,12 @@
 /* eslint-disable camelcase */
+const ordBtn = document.querySelector('#orderBtn');
+console.log(ordBtn);
+ordBtn?.addEventListener('click', (event) => {
+  
+  alert('Письмо о Вашем заказе сформировано и отправлено продавцу')
+  console.log(event);
+});
+
 const btnBuy = document.querySelector('#cardForm');
 const delBtn = document.querySelector('#basketcardForm');
 // console.log(delBtn);
@@ -26,7 +34,6 @@ btnBuy?.addEventListener('click', async (event) => {
   });
   const post = await response.json();
 });
-
 
 // const filterCity = document.querySelectorAll('.maincardAll');
 // const city = document.querySelector('.cities');
@@ -61,7 +68,6 @@ document.querySelector('.search').oninput = function () {
   }
 };
 
-
 // document.querySelector('.search').oninput = function () {
 //   const value = this.value.trim();
 //   const searchCard = document.querySelectorAll('.cardAll div');
@@ -79,4 +85,3 @@ document.querySelector('.search').oninput = function () {
 //     });
 //   }
 // };
-

@@ -17,11 +17,13 @@ const renderCabinet = async (req, res) => {
 const postCabinet = async (req, res) => {
   try {
     const Id = req.session.userId;
+    const { location, email } = req.session;
     const {
       title, cost, link, description, condition,
     } = req.body;
+    // const location = await
     await Card.create({
-      title, cost, link, description, condition, status: true, user_id: Id,
+      title, cost, email, location, link, description, condition, status: true, user_id: Id,
     });
     res.redirect('/cabinet');
   } catch (error) {
