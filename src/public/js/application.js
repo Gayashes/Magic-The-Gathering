@@ -27,21 +27,6 @@ btnBuy?.addEventListener('click', async (event) => {
   const post = await response.json();
 });
 
-
-// const filterCity = document.querySelectorAll('.maincardAll');
-// const city = document.querySelector('.cities');
-// city.addEventListener('click', async (event) => {
-//   const filterClass = event.target.dataset['cardid'];
-//   console.log(filterClass);
-
-//   filterCity.forEach(elem => {
-//     elem.classList.remove('hide')
-//     if (!elem.classList.contains(filterClass)){
-//     elem.classList.add('hide')
-//   }
-// })
-// })
-
 document.querySelector('.search').oninput = function () {
   const value = this.value.trim();
   const searchCard = document.querySelectorAll('.cardAll div');
