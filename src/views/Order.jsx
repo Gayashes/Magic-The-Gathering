@@ -11,7 +11,14 @@ function Basket({ user, userBasket, sum }) {
           Ваш заказ,
           {' '}
           {user}
+<<<<<<< HEAD
           ;
+=======
+          , на сумму
+          { sum }
+          {' '}
+          $ ;
+>>>>>>> b6b00378419248a51b49faf05659dc9af2cce44e
         </h1>
         <table className="sizeorder">
           <div className="orderDiv">
@@ -26,15 +33,17 @@ function Basket({ user, userBasket, sum }) {
           {userBasket.map((card) => (
             <div className="orderDiv">
               <tr>
-                <td className="orderstat">{card.Card.cost}</td>
-                <td className="orderstat">{card.Card.title}</td>
-                <td className="orderstat">{card.Card.condition}</td>
-                <td className="orderstat">{card.Card.location}</td>
-                <td className="orderstat">{card.Card.email}</td>
+                <td className="orderstat">{card['Card.cost']}</td>
+                <td className="orderstat">{card['Card.title']}</td>
+                <td className="orderstat">{card['Card.condition']}</td>
+                <td className="orderstat">{card['Card.location']}</td>
+                <td className="orderstat">{card['Card.email']}</td>
+                
               </tr>
             </div>
-
+            
           ))}
+          
         </table>
         <div className="buyorderDiv">
           <a style={{ marginTop: 20, marginRight: 20 }} id="orderBtn" href="/order/send" className="btn btn-warning buyorder">Купить</a>

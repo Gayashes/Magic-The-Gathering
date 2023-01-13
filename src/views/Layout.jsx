@@ -20,36 +20,6 @@ function Layout({ children, user }) {
       </head>
       <body>
         { user ? (
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-              <div className="container-fluid">
-                <a className="navbar-brand" href="/">
-                  <img src="/images/download.png" width="60" height="50" />
-                </a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon" />
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div className="navbar-nav">
-                    <a className="nav-link" aria-current="page" href="/cabinet">
-                      Ваш личный кабинет,
-                      {user}
-                    </a>
-                  </div>
-                  <div className="navbar-nav">
-                    <a className="nav-link" aria-current="page" href="/logout">
-                      Выйти
-                    </a>
-                  </div>
-                  <div className="navbar-nav">
-                    <a className="nav-link" aria-current="page" href="/basket">
-                      Корзина
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </nav>
-        )
-          : (
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
               <a className="navbar-brand" href="/">
@@ -60,23 +30,62 @@ function Layout({ children, user }) {
               </button>
               <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                  <a className="nav-link" aria-current="page" href="/login">Присоединяйся к миру магии!</a>
+                  <a className="nav-link" aria-current="page" href="/cabinet">
+                    Ваш личный кабинет,
+                    {user}
+                  </a>
+                </div>
+                <div className="navbar-nav">
+                  <a className="nav-link" aria-current="page" href="/logout">
+                    Выйти
+                  </a>
+                </div>
+                <div className="navbar-nav">
+                  <a className="nav-link" aria-current="page" href="/basket">
+                    Корзина
+                  </a>
                 </div>
               </div>
             </div>
           </nav>
+        )
+          : (
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+              <div className="container-fluid">
+                <a className="navbar-brand" href="/">
+                  <img src="/images/download.png" width="60" height="50" />
+                </a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span className="navbar-toggler-icon" />
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div className="navbar-nav">
+                    <a className="nav-link" aria-current="page" href="/login">Присоединяйся к миру магии!</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
           )}
 
         <div className="container">{children}</div>
 
         <footer className="bg-light text-center text-lg-start footer">
           <div className="text-center p-3">
-            <p style={{ color: '#af8b4c' }}>Prodused by</p>
-            <div className="footerProdused" style={{ color: '#af8b4c' }}>
-              <div><a href="https://github.com/m-DZEN" style={{ color: '#af8b4c' }}>Maxim Voronin</a></div>
-              <div><a href="https://github.com/vladmalovich" style={{ color: '#af8b4c' }}>Vladimir Malovichko</a></div>
-              <div><a href="https://github.com/Gayashes" style={{ color: '#af8b4c' }}>Gayane Nalbandyan</a></div>
-              <div><a href="https://github.com/Khramklen" style={{ color: '#af8b4c' }}>Elena Khramkova</a></div>
+            <p style={{ color: 'white' }}>
+              <img
+                src="images/Octocat.png"
+                width="40"
+                height="32"
+                alt="Гитхабчик"
+              />
+              Prodused by
+
+            </p>
+            <div className="footerProdused" style={{ color: 'white' }}>
+              <div><a href="https://github.com/m-DZEN" style={{ color: 'white' }}>Maxim Voronin</a></div>
+              <div><a href="https://github.com/vladmalovich" style={{ color: 'white' }}>Vladimir Malovichko</a></div>
+              <div><a href="https://github.com/Gayashes" style={{ color: 'white' }}>Gayane Nalbandyan</a></div>
+              <div><a href="https://github.com/Khramklen" style={{ color: 'white' }}>Elena Khramkova</a></div>
             </div>
           </div>
         </footer>
