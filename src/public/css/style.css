@@ -16,10 +16,16 @@
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 400px;
+
+
   height: 800px;
+}
+.scrollform {
   overflow-y: scroll;
   overflow-x: hidden;
+  height: 600px;
 }
+
 .container-fluid {
   background: linear-gradient(rgba(0, 0, 0, 0.82),rgba(77, 19, 19, 0.864), ) 
 }
