@@ -36,9 +36,11 @@ function Main({ allCard, user }) {
                       <p className="text-center status">{card.status}</p>
                       <a href={`/onecard/${card.id}`} className="cardtitle">{card.title}</a>
                       <h5 className="text-center">{card.location}</h5>
-
-                      <button id={card.id} data-userid={card.user_id} type="click" className="btn btn-secondary center-block btnBuy">Добавить в корзину</button>
-
+                      { card.status ? (
+                        <button id={card.id} data-userid={card.user_id} type="click" className="btn btn-success center-block btnBuy">Добавить в корзину</button>
+                      ) : (
+                        <button id={card.id} data-userid={card.user_id} type="click" className="btn btn-warning center-block btnBuy" disabled="true" >ДОБАВЛЕНО</button>
+                        ) }
                       <h5 className="text-center">
                         Стоимость:
                         {card.cost}
@@ -61,8 +63,10 @@ function Main({ allCard, user }) {
                     <a className="oneCard" href={`/onecard/${card.id}`}>
                       <img src={card.link} className="card-img-top cardimg" alt="card-img" />
                     </a>
+
                     <h5 className="text-center status">{card.status }</h5>
                     <a href={`/${card.id}`} className="cardtitle">{card.title}</a>
+
                     <h5 className="text-center">{card.location}</h5>
                     <h5 className="text-center">
                       Стоимость:
