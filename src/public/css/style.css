@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'BelweBold';
   src: url(../fonts/BelweBold.otf);
- }
+}
 @font-face {
   font-family: 'Rose-Mystical';
   src: url(../fonts/Rose-Mystica.ttf);
@@ -9,7 +9,7 @@
 @font-face {
   font-family: 'Minotaur-Jugendstil';
   src: url(../fonts/Minotaur-Jugendstil.ttf);
- }
+}
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -17,13 +17,12 @@
   margin-left: auto;
   margin-bottom: 400px;
 
+
   height: 800px;
 }
 .scrollform {
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-color: rebeccapurple green;
-  scrollbar-width: thin;
   height: 600px;
 }
 
