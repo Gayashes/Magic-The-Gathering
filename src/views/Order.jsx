@@ -11,11 +11,7 @@ function Basket({ user, userBasket, sum }) {
           Ваш заказ,
           {' '}
           {user}
-          , на сумму
-          {' '}
-          { sum }
-          {' '}
-          $ ;
+          ;
         </h1>
         <table className="sizeorder">
           <div className="orderDiv">
@@ -41,7 +37,7 @@ function Basket({ user, userBasket, sum }) {
           ))}
         </table>
         <div className="buyorderDiv">
-            <a style={{ marginTop: 20, marginRight: 20 }} id="orderBtn" href="/order/send" className="btn btn-warning buyorder">Купить</a>
+          <a style={{ marginTop: 20, marginRight: 20 }} id="orderBtn" href="/order/send" className="btn btn-warning buyorder">Купить</a>
         </div>
       </div>
     </Layout>
