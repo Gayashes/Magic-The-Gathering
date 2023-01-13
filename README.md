@@ -1,4 +1,4 @@
-# magic-gathering
+# Magic: The Gathering
 Hi everyone! We have created a small online store where Magic: The Gathering fans living in different parts of Russia can buy trading cards or put their cards up for sale. To quickly find the cards you need, you can use the filter by name or city.
 
 <h2>Main page</h2>
