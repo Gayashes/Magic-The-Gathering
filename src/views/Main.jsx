@@ -5,6 +5,7 @@ const Layout = require('./Layout');
 function Main({ allCard, user }) {
   return (
     <Layout user={user}>
+      
       <form className="maimFilter" method="POST" action="/filter">
         <label htmlFor="exampleInputURL" className="form-label filter" key="filter-label" />
         <h6 type="text" data-cardid="maincardAll" className="form-control filter cities" placeholder="Фильровать по городу" name="city" list="cities">Фильтровать по городу</h6>
@@ -15,6 +16,7 @@ function Main({ allCard, user }) {
           <option>Севастополь</option>
           <option>Владивосток</option>
           <option>Екатеринбург</option>
+          <option>Астрахань</option>
         </select>
         <button id="filterfetch" type="click" className="btn btn-primary">Загрузить</button>
       </form>

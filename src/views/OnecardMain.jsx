@@ -5,17 +5,17 @@ function OnecardMain({ user, oneCard }) {
   return (
     <Layout user={user}>
       <link rel="stylesheet" defer href="/css/cardOne.css" />
-      <div className="containerOne bd-highlight d-flex justify-content-between row-cols-1  cardOne">
-              <div className="containerOne col-sm-6">
+      <div className="containerOne ">
+              <div className="containerOne col-sm-6 " >
+                    <img src={oneCard.link} className="card-img-top cardimg " alt="card-img" />
                 <div className="card cardOne ">
-                    <img src={oneCard.link} className="card-img-top cardimg" alt="card-img" />
                   <div className="card-body cardbody mainCards">
-                    <h5 className="text-center">{oneCard.status }</h5>
-                    <h5 className="card-title">{oneCard.title}</h5>
-                    <h5 className="text-center">{oneCard.location}</h5>
-                    <h5 className="text-center">{oneCard.description}</h5>
-                    <h5 className="text-center">Стоимость:{oneCard.cost}$</h5>
-                    <h5 className="text-center">Состояние карточки:{oneCard.condition}</h5>
+                    <h5 className="text">{oneCard.status }</h5>
+                    <h5 className="card-title"><p className='desc'>Название:</p>{oneCard.title}</h5>
+                    <h5 className="text"><p className='desc'>Город:</p>{oneCard.location}</h5>
+                    <h5 className="text"><p className='desc'>Описание:</p>{oneCard.description}</h5>
+                    <h5 className="text"><p className='desc'>Стоимость:</p>{oneCard.cost}$</h5>
+                    <h5 className="text"><p className='desc'>Состояние карточки:</p>{oneCard.condition}</h5>
                   </div>
                 </div>
               </div>
