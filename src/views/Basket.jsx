@@ -6,17 +6,17 @@ const Layout = require('./Layout');
 function Basket({ user, userBasket }) {
   return (
     <Layout user={user}>
-    <link rel="stylesheet" defer href="/css/basket.css" /> 
-      <div className="basket">
-        <h1>
-          Отличный выбор,
-          {' '}
-          {user}
-        </h1>
-        <div id="basketcardForm">
-          <div className="d-flex flex-row row row-cols-2 row-cols-md-5 g-2 g-lg-3 ">
+      <link rel="stylesheet" defer href="/css/basket.css" />
+      <h1>
+        Отличный выбор,
+        {' '}
+        {user}
+      </h1>
+      <div className="basket cardAll">
+        <div id="basketcardForm" className="basket2">
+          <div className="d-flex flex-row row row-cols-2 row-cols-md-3 g-2 g-lg-3">
             {userBasket.map((card) => (
-              <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-around row-cols-1 row-cols-md-2 g-4 cardAll">
+              <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-around row-cols-1 row-cols-md-2 g-4">
                 <div className="col-sm-6 ">
                   <div className="card maincardAll">
                     <div className="card-body cardbody mainCards">

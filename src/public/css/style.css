@@ -16,8 +16,7 @@
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 400px;
-
-
+  width: 1500px;
   height: 800px;
 }
 .scrollform {
@@ -65,28 +64,9 @@ body {
   font-family: 'Minotaur-Jugendstil';
   
 }
-.cabinetMine {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 100%;
-  
-}
 
-.cabitetInput {
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
 
-.cabinetCards {
-  width: 100%;
-  height: 800px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scrollbar-color: rebeccapurple green;
-}
+
 
 .card {
   margin-left: 22px;
