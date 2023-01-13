@@ -73,7 +73,7 @@ function Layout({ children, user }) {
           <div className="text-center p-3">
             <p style={{ color: 'white' }}>
               <img
-                src="images/Octocat.png"
+                src="/images/Octocat.png"
                 width="40"
                 height="32"
                 alt="Гитхабчик"
