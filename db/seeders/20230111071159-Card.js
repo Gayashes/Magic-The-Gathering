@@ -55,6 +55,7 @@ module.exports = {
     },
     {
       title: 'Слизеног, Незваный Пассажир',
+      link: 'https://mtgsale.ru/cardImage/dom/RUS/205.jpg',
       cost: 10.2,
       location: 'Севастополь',
       email: 'mtg_app_test@mail.ru',
