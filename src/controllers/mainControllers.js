@@ -56,7 +56,7 @@ const renderMainFilter = async (req, res) => {
 const renderSearch = async (req, res) => {
   try {
     const { titlesearch } = req.body;
-    const titlesearchreg = titlesearch.toLowerCase();
+    const titlesearchreg = titlesearch.toLowerCase().trim();
     // console.log('aaaaaa', titlesearch);
     const user = req.session?.userName;
     const allCard = await Card.findAll({
