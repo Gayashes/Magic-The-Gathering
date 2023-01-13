@@ -4,6 +4,7 @@ const Layout = require('./Layout');
 function Cabinet({ user, userCards }) {
   return (
     <Layout user={user}>
+      <link rel="stylesheet" defer href="/css/cabinet.css" />
       <div className="cabinetMine">
         <div>
           <h2>Добавить карточку на продажу</h2>
@@ -38,7 +39,7 @@ function Cabinet({ user, userCards }) {
           </div>
         </div>
 
-        <div className="cabinetCards">
+        <div className="cabinetCards scrollform">
           <div className="row row-cols-1 row-cols-md-2 g-4">
 
             {userCards.map((card) => (
