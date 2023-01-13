@@ -38,9 +38,12 @@ function Basket({ user, userBasket }) {
 
         </div>
       </div>
+      <div className="order">
       <form method="POST" action="/order">
-        <a style={{ marginTop: 20, marginRight: 20 }} href="/order" className="btn btn-warning">Оформить заказ</a>
+        <a href="/order" className="btn btn-warning orderbtn">Оформить заказ</a>
       </form>
+      </div>
+      
     </Layout>
   );
 }
