@@ -15,7 +15,7 @@ function Cabinet({ user, userCards }) {
               </div>
               <div className="mb-3">
                 <label htmlFor="exampleInputCost" className="form-label">Цена</label>
-                <textarea type="cost" name="cost" className="form-control" id="exampleInputCost" />
+                <textarea type="number" name="cost" className="form-control" id="exampleInputCost" />
               </div>
               <div className="mb-3">
                 <label htmlFor="exampleInputURL" className="form-label">Ссылка на обложку</label>

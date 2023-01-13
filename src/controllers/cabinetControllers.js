@@ -21,9 +21,10 @@ const postCabinet = async (req, res) => {
     const {
       title, cost, link, description, condition,
     } = req.body;
+    const costNumber = +cost;
     // const location = await
     await Card.create({
-      title, cost, email, location, link, description, condition, status: true, user_id: Id,
+      title, cost: costNumber, email, location, link, description, condition, status: true, user_id: Id,
     });
     res.redirect('/cabinet');
   } catch (error) {
