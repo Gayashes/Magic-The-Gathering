@@ -7,11 +7,11 @@ const renderOrder = async (req, res) => {
   try {
     const user_id_buy = req.session.userId;
 
-    const userBasket = await Basket.findAll({ where: { user_id_buy }, include: Card });
+    const userBasket = await Basket.findAll({ where: { user_id_buy }, include: { model: Card, attributes: ['cost', 'title', 'location', 'condition', 'email'] }, raw: true });
+    console.log('userBasket', userBasket);
 
+    const sum = userBasket.reduce((acc, userbasketItem) => acc + (+userbasketItem['Card.cost']), 0);
     const user = req.session?.userName;
-
-    const sum = 0;
 
     render(order, { user, userBasket, sum }, res);
   } catch (error) {

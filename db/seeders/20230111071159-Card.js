@@ -4,7 +4,7 @@ module.exports = {
     await queryInterface.bulkInsert('Cards', [{
       title: 'Древняя Вражда',
       link: 'https://mtgsale.ru/cardImage/dom/RUS/154.jpg',
-      cost: '10,2',
+      cost: 10.2,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Идеальное',
@@ -17,7 +17,7 @@ module.exports = {
     {
       title: 'Балот-Пожиратель',
       link: 'https://mtgsale.ru/cardImage/dom/RUS/156.jpg',
-      cost: '15',
+      cost: 15,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Идеальное',
@@ -30,7 +30,7 @@ module.exports = {
     {
       title: 'Защитник Геи ',
       link: 'https://mtgsale.ru/cardImage/dom/RUS/162.jpg',
-      cost: '10,2',
+      cost: 10.2,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Идеальное',
@@ -43,7 +43,7 @@ module.exports = {
     {
       title: 'Гарна, Пламя Крови',
       link: 'https://mtgsale.ru/cardImage/dom/RUS/194.jpg',
-      cost: '10,2',
+      cost: 10.2,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Хорошее',
@@ -56,7 +56,7 @@ module.exports = {
     {
       title: 'Слизеног, Незваный Пассажир',
       link: 'https://mtgsale.ru/cardImage/dom/RUS/205.jpg',
-      cost: '10,2',
+      cost: 10.2,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Хорошее',
@@ -69,7 +69,7 @@ module.exports = {
     {
       title: 'Арвад Проклятый',
       link: 'https://mtgsale.ru/cardImage/dom/RUS/191.jpg',
-      cost: '10,2',
+      cost: 10.2,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Хорошее',
@@ -82,7 +82,7 @@ module.exports = {
     {
       title: 'Быстроногий Наблюдатель',
       link: 'https://mtgsale.ru/cardImage/dom/rus/230.jpg',
-      cost: '10,2',
+      cost: 10.2,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Удовлетворительное',
@@ -95,7 +95,7 @@ module.exports = {
     {
       title: 'Ледяной Манипулятор',
       link: 'https://mtgsale.ru/cardImage/dom/rus/219.jpg',
-      cost: '10,2',
+      cost: 10.2,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Удовлетворительное',
@@ -108,7 +108,7 @@ module.exports = {
     {
       title: 'Свеча из Кровяного Воска',
       link: 'https://mtgsale.ru/cardImage/dom/rus/212.jpg',
-      cost: '10,2',
+      cost: 10.2,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Удовлетворительное',
@@ -121,7 +121,7 @@ module.exports = {
     {
       title: 'Убежище на Утесе',
       link: 'https://mtgsale.ru/cardImage/dom/rus/239.jpg',
-      cost: '10,2',
+      cost: 10.2,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Плохое',
@@ -134,7 +134,7 @@ module.exports = {
     {
       title: 'Серный Водопад',
       link: 'https://mtgsale.ru/cardImage/DOM/RUS/247.jpg',
-      cost: '10,2',
+      cost: 10.2,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Плохое',
@@ -147,7 +147,7 @@ module.exports = {
     {
       title: 'Внутренняя Гавань',
       link: 'https://mtgsale.ru/cardImage/dom/rus/240.jpg',
-      cost: '4',
+      cost: 4,
       location: 'Москва',
       email: 'mtg_app_test@mail.ru',
       condition: 'Плохое',

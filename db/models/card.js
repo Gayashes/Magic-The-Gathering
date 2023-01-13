@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   Card.init({
     title: DataTypes.STRING,
     link: DataTypes.STRING,
-    cost: DataTypes.STRING,
+    cost: DataTypes.DECIMAL,
     location: DataTypes.STRING,
     email: DataTypes.STRING,
     condition: DataTypes.STRING,
