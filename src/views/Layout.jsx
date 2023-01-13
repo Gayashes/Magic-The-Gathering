@@ -8,6 +8,7 @@ function Layout({ children, user }) {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="images/download.png" type="image/png" />
         <title>MagicGathering</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossOrigin="anonymous" />
@@ -19,36 +20,6 @@ function Layout({ children, user }) {
       </head>
       <body>
         { user ? (
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-              <div className="container-fluid">
-                <a className="navbar-brand" href="/">
-                  <img src="/images/download.png" width="60" height="50" />
-                </a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span className="navbar-toggler-icon" />
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div className="navbar-nav">
-                    <a className="nav-link" aria-current="page" href="/cabinet">
-                      Ваш личный кабинет,
-                      {user}
-                    </a>
-                  </div>
-                  <div className="navbar-nav">
-                    <a className="nav-link" aria-current="page" href="/logout">
-                      Выйти
-                    </a>
-                  </div>
-                  <div className="navbar-nav">
-                    <a className="nav-link" aria-current="page" href="/basket">
-                      Корзина
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </nav>
-        )
-          : (
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
               <a className="navbar-brand" href="/">
@@ -59,23 +30,62 @@ function Layout({ children, user }) {
               </button>
               <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                  <a className="nav-link" aria-current="page" href="/login">Присоединяйся к миру магии!</a>
+                  <a className="nav-link" aria-current="page" href="/cabinet">
+                    Ваш личный кабинет,
+                    {user}
+                  </a>
+                </div>
+                <div className="navbar-nav">
+                  <a className="nav-link" aria-current="page" href="/logout">
+                    Выйти
+                  </a>
+                </div>
+                <div className="navbar-nav">
+                  <a className="nav-link" aria-current="page" href="/basket">
+                    Корзина
+                  </a>
                 </div>
               </div>
             </div>
           </nav>
+        )
+          : (
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+              <div className="container-fluid">
+                <a className="navbar-brand" href="/">
+                  <img src="/images/download.png" width="60" height="50" />
+                </a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span className="navbar-toggler-icon" />
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div className="navbar-nav">
+                    <a className="nav-link" aria-current="page" href="/login">Присоединяйся к миру магии!</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
           )}
 
         <div className="container">{children}</div>
 
         <footer className="bg-light text-center text-lg-start footer">
           <div className="text-center p-3">
-            <p style={{ color: '#af8b4c' }}>Prodused by</p>
-            <div className="footerProdused" style={{ color: '#af8b4c' }}>
-              <div><a href="https://github.com/m-DZEN" style={{ color: '#af8b4c' }}>Maxim Voronin</a></div>
-              <div><a href="https://github.com/vladmalovich" style={{ color: '#af8b4c' }}>Vladimir Malovichko</a></div>
-              <div><a href="https://github.com/Gayashes" style={{ color: '#af8b4c' }}>Gayane Nalbandyan</a></div>
-              <div><a href="https://github.com/Khramklen" style={{ color: '#af8b4c' }}>Elena Khramkova</a></div>
+            <p style={{ color: 'white' }}>
+              <img
+                src="images/Octocat.png"
+                width="40"
+                height="32"
+                alt="Гитхабчик"
+              />
+              Prodused by
+
+            </p>
+            <div className="footerProdused" style={{ color: 'white' }}>
+              <div><a href="https://github.com/m-DZEN" style={{ color: 'white' }}>Maxim Voronin</a></div>
+              <div><a href="https://github.com/vladmalovich" style={{ color: 'white' }}>Vladimir Malovichko</a></div>
+              <div><a href="https://github.com/Gayashes" style={{ color: 'white' }}>Gayane Nalbandyan</a></div>
+              <div><a href="https://github.com/Khramklen" style={{ color: 'white' }}>Elena Khramkova</a></div>
             </div>
           </div>
         </footer>
