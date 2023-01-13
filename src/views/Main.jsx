@@ -16,71 +16,79 @@ function Main({ allCard, user }) {
           <option>Севастополь</option>
           <option>Владивосток</option>
           <option>Екатеринбург</option>
+          <option>Астрахань</option>
         </select>
         <button id="filterfetch" type="click" className="btn btn-primary">Загрузить</button>
       </form>
       <form className="searchPost" method="POST" action="/search">
         <input type="title" name="titlesearch" className="form-control search" id="123" placeholder="Поиск" />
         <button id="searchfetch" type="click" className="btn btn-primary">Поиск</button>
+
       </form>
-      {user ? (
-        <form method="POST" action="/basket" id="cardForm">
-          <div className="content d-flex flex-row row row-cols-2 row-cols-md-5 g-2 g-lg-3 ">
+
+      <div className="scrollform">
+
+        {user ? (
+          <form method="POST" action="/basket" id="cardForm">
+            <div className="content d-flex flex-row row row-cols-2 row-cols-md-5 g-2 g-lg-3 ">
+              {allCard.map((card) => (
+                <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-b row-cols-1 row-cols-md-2 g-4 cardAll">
+                  <div className="col-sm-6 ">
+                    <div className="card maincardAll">
+                      <div className="card-body cardbody mainCards">
+                        <a className="oneCard" href={`/onecard/${card.id}`}>
+                          <img src={card.link} className="card-img-top cardimg" alt="card-img" />
+                        </a>
+                        <p className="text-center status">{card.status}</p>
+                        <a href={`/onecard/${card.id}`} className="cardtitle" style={{ color: '#af8b4c' }}>{card.title}</a>
+                        <h5 className="text-center">{card.location}</h5>
+                        { card.status ? (
+                          <button id={card.id} data-userid={card.user_id} type="click" className="btn center-block btnBuy">Добавить в корзину</button>
+                        ) : (
+                    <button id={card.id} data-userid={card.user_id} type="click" className="btn center-block btnBuy" disabled="true">Добавлено</button>
+                        ) }
+                        <h5 className="text-center">
+                          Стоимость:
+                        {card.cost}
+                          $
+                      </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </form>
+        ) : (
+          <div className="content d-flex flex-row row row-cols-2 row-cols-md-5 g-2 g-lg-3">
             {allCard.map((card) => (
-              <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-b row-cols-1 row-cols-md-2 g-4 cardAll">
-                <div className="col-sm-6 ">
+              <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-between row-cols-1 row-cols-md-2 g-4 cardAll">
+                <div className="col-sm-6">
                   <div className="card maincardAll">
                     <div className="card-body cardbody mainCards">
                       <a className="oneCard" href={`/onecard/${card.id}`}>
                         <img src={card.link} className="card-img-top cardimg" alt="card-img" />
                       </a>
-                      <p className="text-center status">{card.status}</p>
-                      <a href={`/onecard/${card.id}`} className="cardtitle" style={{ color: '#af8b4c' }}>{card.title}</a>
+
+                      <h5 className="text-center status">{card.status }</h5>
+                      <a href={`/${card.id}`} className="cardtitle" style={{ color: '#af8b4c' }}>{card.title}</a>
+
                       <h5 className="text-center">{card.location}</h5>
-                      { card.status ? (
-                        <button id={card.id} data-userid={card.user_id} type="click" className="btn center-block btnBuy">Добавить в корзину</button>
-                      ) : (
-                        <button id={card.id} data-userid={card.user_id} type="click" className="btn center-block btnBuy" disabled="true">Добавлено</button>
-                      ) }
                       <h5 className="text-center">
                         Стоимость:
-                        {card.cost}
+                      {card.cost}
                         $
-                      </h5>
+                    </h5>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        </form>
-      ) : (
-        <div className="content d-flex flex-row row row-cols-2 row-cols-md-5 g-2 g-lg-3">
-          {allCard.map((card) => (
-            <div className="d-flex flex-row bd-highlight mb-3 d-flex justify-content-between row-cols-1 row-cols-md-2 g-4 cardAll">
-              <div className="col-sm-6">
-                <div className="card maincardAll">
-                  <div className="card-body cardbody mainCards">
-                    <a className="oneCard" href={`/onecard/${card.id}`}>
-                      <img src={card.link} className="card-img-top cardimg" alt="card-img" />
-                    </a>
+        )}
 
-                    <h5 className="text-center status">{card.status }</h5>
-                    <a href={`/${card.id}`} className="cardtitle" style={{ color: '#af8b4c' }}>{card.title}</a>
+      </div>
 
-                    <h5 className="text-center">{card.location}</h5>
-                    <h5 className="text-center">
-                      Стоимость:
-                      {card.cost}
-                      $
-                    </h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
     </Layout>
   );
 }
