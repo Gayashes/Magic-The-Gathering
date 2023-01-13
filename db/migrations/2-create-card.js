@@ -17,7 +17,7 @@ module.exports = {
         allowNull: true,
       },
       cost: {
-        type: Sequelize.STRING,
+        type: Sequelize.DECIMAL,
         allowNull: true,
       },
       location: {
