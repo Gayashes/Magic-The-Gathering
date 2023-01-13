@@ -42,20 +42,6 @@ btnBuy?.addEventListener('click', async (event) => {
   }
 });
 
-// const filterCity = document.querySelectorAll('.maincardAll');
-// const city = document.querySelector('.cities');
-// city.addEventListener('click', async (event) => {
-//   const filterClass = event.target.dataset['cardid'];
-//   console.log(filterClass);
-
-//   filterCity.forEach(elem => {
-//     elem.classList.remove('hide')
-//     if (!elem.classList.contains(filterClass)){
-//     elem.classList.add('hide')
-//   }
-// })
-// })
-
 document.querySelector('.search').oninput = function () {
   const value = this.value.trim();
   const searchCard = document.querySelectorAll('.cardAll div');
@@ -75,20 +61,16 @@ document.querySelector('.search').oninput = function () {
   }
 };
 
-// document.querySelector('.search').oninput = function () {
-//   const value = this.value.trim();
-//   const searchCard = document.querySelectorAll('.cardAll div');
-//   if (searchCard !== '') {
-//     searchCard.forEach((element) => {
-//       if (element.innerText.search(value) === -1) {
-//         element.classList.add('hide');
-//       } else {
-//         element.classList.remove('hide');
-//       }
-//     });
-//   } else {
-//     searchCard.forEach((element) => {
-//       element.classList.remove('hide');
-//     });
-//   }
-// };
+
+const searchCard = document.querySelectorAll('.cardAll div');
+console.log(searchCard);
+const statusBuy = document.querySelectorAll('.status');
+console.log(statusBuy);
+console.log(statusBuy.value)
+
+if (statusBuy.status === 'false') {
+  searchCard.forEach((element) => {
+    element.classList.add('hide');
+  });
+}
+
