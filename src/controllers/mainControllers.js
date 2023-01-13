@@ -1,9 +1,12 @@
+const sequelize = require('sequelize');
+
 const render = require('../lib/render');
 const Main = require('../views/Main');
 const MainNoCard = require('../views/MainNoCard');
 const OnecardMain = require('../views/OnecardMain');
 const Error = require('../views/Error');
 const { Card } = require('../../db/models');
+
 
 const renderHome = async (req, res) => {
   try {
@@ -51,15 +54,22 @@ const renderMainFilter = async (req, res) => {
 };
 
 const renderSearch = async (req, res) => {
-  console.log('aaaaaa11111');
   try {
     const { titlesearch } = req.body;
-    console.log('aaaaaa', titlesearch);
+    const titlesearchreg = titlesearch.toLowerCase();
+    // console.log('aaaaaa', titlesearch);
     const user = req.session?.userName;
-    const allCard = await Card.findAll({ where: { title: titlesearch.toLoweCase() }, raw: true });
+    const allCard = await Card.findAll({
+      where: sequelize.where(
+        sequelize.fn('lower', sequelize.col('title')),
+        'LIKE',
+        `%${titlesearchreg}%`,
+      ),
+    });
     // console.log(allCard);
     render(Main, { user, allCard }, res);
   } catch (error) {
+    console.log(error)
     render(Error, {
       message: 'Невозможно отобразить страницу поиска, но мы над этим уже работаем, попробуйте позже',
       error: {},

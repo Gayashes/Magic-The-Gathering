@@ -10,7 +10,8 @@ function Main({ allCard, user }) {
         <h6 type="text" data-cardid="maincardAll" className="form-control filter cities" placeholder="Фильровать по городу" name="city" list="cities">Фильтровать по городу</h6>
         <select name="filter" id="citiesSelect">
           <option />
-          <option>Москва и МО</option>
+          <option>Москва</option>
+          <option>МО</option>
           <option>Санкт-Петербург</option>
           <option>Севастополь</option>
           <option>Владивосток</option>
