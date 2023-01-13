@@ -7,7 +7,7 @@ function Basket({ user, userBasket, sum }) {
   return (
     <Layout user={user}>
       <div className="basket">
-        <h1>
+        <h1 className="sizeorder">
           Ваш заказ,
           {' '}
           {user}
@@ -17,29 +17,32 @@ function Basket({ user, userBasket, sum }) {
           {' '}
           $ ;
         </h1>
-        <table>
-          <tr>
-            <td>Цена</td>
-            <td>Наименование</td>
-            <td>Состояние</td>
-            <td>Локация</td>
-            <td>E-mail продавца</td>
-          </tr>
-
-          {userBasket.map((card) => (
+        <table className="sizeorder">
+          <div className="orderDiv">
             <tr>
-              <td>{card.Card.cost}</td>
-              <td>{card.Card.title}</td>
-              <td>{card.Card.condition}</td>
-              <td>{card.Card.location}</td>
-              <td>{card.Card.email}</td>
+              <td className="orderstat">Цена</td>
+              <td className="orderstat">Наименование</td>
+              <td className="orderstat">Состояние</td>
+              <td className="orderstat">Локация</td>
+              <td className="orderstat">E-mail продавца</td>
             </tr>
+          </div>
+          {userBasket.map((card) => (
+            <div className="orderDiv">
+              <tr>
+                <td className="orderstat">{card.Card.cost}</td>
+                <td className="orderstat">{card.Card.title}</td>
+                <td className="orderstat">{card.Card.condition}</td>
+                <td className="orderstat">{card.Card.location}</td>
+                <td className="orderstat">{card.Card.email}</td>
+              </tr>
+            </div>
+
           ))}
         </table>
-        <div>
-          <a style={{ marginTop: 20, marginRight: 20 }} id="orderBtn" href="/order/send" className="btn btn-warning">Купить</a>
+        <div className="buyorderDiv">
+            <a style={{ marginTop: 20, marginRight: 20 }} id="orderBtn" href="/order/send" className="btn btn-warning buyorder">Купить</a>
         </div>
-
       </div>
     </Layout>
   );

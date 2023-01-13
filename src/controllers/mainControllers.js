@@ -69,7 +69,7 @@ const renderSearch = async (req, res) => {
     // console.log(allCard);
     render(Main, { user, allCard }, res);
   } catch (error) {
-    console.log(error)
+    console.log(error);
     render(Error, {
       message: 'Невозможно отобразить страницу поиска, но мы над этим уже работаем, попробуйте позже',
       error: {},
