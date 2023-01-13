@@ -151,7 +151,7 @@ module.exports = {
       location: 'Астрахань',
       email: 'mtg_app_test@mail.ru',
       condition: 'Плохое',
-      status: false,
+      status: true,
       description: 'Внутренняя Гавань выходит на поле битвы повернутой, если только под вашим контролем нет Леса или Острова.',
 
       user_id: 1,
