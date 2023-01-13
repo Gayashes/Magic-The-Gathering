@@ -1,27 +1,270 @@
+@font-face {
+  font-family: 'BelweBold';
+  src: url(../fonts/BelweBold.otf);
+}
+@font-face {
+  font-family: 'Rose-Mystical';
+  src: url(../fonts/Rose-Mystica.ttf);
+}
+@font-face {
+  font-family: 'Minotaur-Jugendstil';
+  src: url(../fonts/Minotaur-Jugendstil.ttf);
+}
+.vsefiltr {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  width: 100%;
+
+}
+
+.maimFilter{
+
+ margin-bottom: 20px;
+ margin-right: 80px;
+}
+.searchPost{
+  width: 20%;
+
+}
+h4 {
+  width: 80%;
+}
+.search {
+  background-color: #6d3434aa;
+  margin-bottom: 10px;
+  padding: 10px;
+  border:none;
+  color: #FFF;
+}
+.search::after {
+  background-color: #6d3434aa;
+}
+#citiesSelect {
+  border-radius: 10px;
+  background-color: #6d3434aa;
+  border: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  color: #FFF;
+}
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 400px;
+
+  height: 800px;
+}
+.scrollform {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 600px;
+  border-radius: 20px;
+  /* width: 1400px; */
+}
+
+.container-fluid {
+  background: linear-gradient(rgba(0, 0, 0, 0.82),rgba(77, 19, 19, 0.864), ) 
+}
+.footer {
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(77, 19, 19, 0.864), rgba(0, 0, 0, 0.82))
+}
+.navbar  {
+  background: linear-gradient(rgba(77, 19, 19, 0.864), rgba(0, 0, 0, 0.82));
+  font-size: 28px;
+  font-family: 'Rose-Mystical';
+}
+.nav-link {
+  color:azure
+  
+}
+.content {
+  background: linear-gradient(rgba(77, 19, 19, 0.864), rgba(0, 0, 0, 0.82));
+  margin-bottom: 220px;
+  margin-top: 10px;
+  height: max-content;
+  border-radius: 40px;
+  /* border:none; */
+  box-shadow: 10px 5px 5px 5px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+body {
+  background-size: auto;
+  background-image: url("/images/image.jpg");
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-repeat: round;
+  overflow: hidden;
+  font-family: 'Minotaur-Jugendstil';
+  
+}
+
+.card {
+  margin-left: 22px;
+  width: 315px;
+  background-color: rgba(238, 130, 238, 0);
+  color: aliceblue;
+  border: none;
+  font-size: 24px;
+}
+
+.cardtitle {
+  color: gold;
+  font-size: 24px;
+}
+.btn {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative;
+  background-color: #af8b4c;
+  border: none;
+  font-size: 19px;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+.btn:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+  background-color: #af8b4c;
+}
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  /* border: 1px solid rgba(255,255,255,0.5); */
+  transform: scale(1.2,1.2);
+  /* background-color: #af8b4c; */
+}
+.btn:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+  background-color: #af8b4c;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
   }
-  .footer {
-    bottom: 0px;
-    position: fixed;
-    width: 100%;
-    text-align: center;
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
   }
-  @media (min-width: 768px) {
-    .container {
-      width: 750px;
-    }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
   }
-  @media (min-width: 992px) {
-    .container {
-      width: 970px;
-    }
+}
+.cardAll {
+  width: 33%;
+  height: 33%;
+}
+
+.cardimg {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.cardimg:hover{
+  transform: scale(1.05);
+}
+.btnBuy {
+  width: 75%;
+  height: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.mainCards{
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  text-align: center;
+  background-color:rgba(77, 19, 19, 0); 
+  
+}
+
+.cardtitle{
+  color: black;
+  text-align: center;
+  
+}
+.hide {
+  opacity: 0.7;
+}
+@keyframes a1{
+  to{
+    opacity: 0;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
   }
-  @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
-    }
-  }
+  
+}
+.cardOne {
+  width: 90%;
+  height: 80%;
+}
+.footerProdused {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  color: black;
+}
+.orderstat {
+  border: solid 2px;
+  column-width: 200px;
+  font-size: 35px;
+  word-wrap: break-word;
+
+  
+}
+.sizeorder {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.buyorder{
+  text-align: center;
+  width: 20%;
+  height: 80%;
+  justify-content: center;
+}
+.buyorderDiv{
+  display: flex;
+  justify-content: center;
+  
+}
+.buyorder{
+  font-size: 20px; 
+}
+
+

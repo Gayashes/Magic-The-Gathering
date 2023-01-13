@@ -1,12 +1,16 @@
 const express = require('express');
 
 const route = express.Router();
+const {
+  renderHome,
+  renserOneCardMain,
+  renderMainFilter,
+  renderSearch,
+} = require('../controllers/mainControllers');
 
-const render = require('../lib/render');
-const Main = require('../src/views/Main');
-
-route.get('/', (req, res) => {
-  render(Main, null, res);
-});
+route.get('/', renderHome);
+route.post('/search', renderSearch);
+route.post('/filter', renderMainFilter);
+route.get('/onecard/:id', renserOneCardMain);
 
 module.exports = route;

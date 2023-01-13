@@ -55,7 +55,10 @@ module.exports = {
     },
     {
       title: 'Слизеног, Незваный Пассажир',
+<<<<<<< HEAD
       link: 'https://mtgsale.ru/cardImage/dom/RUS/205.jpg',
+=======
+>>>>>>> c39c517a79a96b83119eccf966ce8da9b055b3f4
       cost: 10.2,
       location: 'Севастополь',
       email: 'mtg_app_test@mail.ru',
@@ -151,7 +154,11 @@ module.exports = {
       location: 'Астрахань',
       email: 'mtg_app_test@mail.ru',
       condition: 'Плохое',
+<<<<<<< HEAD
       status: true,
+=======
+      status: false,
+>>>>>>> c39c517a79a96b83119eccf966ce8da9b055b3f4
       description: 'Внутренняя Гавань выходит на поле битвы повернутой, если только под вашим контролем нет Леса или Острова.',
 
       user_id: 1,
