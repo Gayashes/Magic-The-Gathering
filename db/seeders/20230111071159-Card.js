@@ -41,7 +41,7 @@ module.exports = {
       updatedAt: new Date(),
     },
     {
-      title: 'Гарна, Пламя Крови ',
+      title: 'Гарна, Пламя Крови',
       link: 'https://mtgsale.ru/cardImage/dom/RUS/194.jpg',
       cost: '10,2',
       location: 'Москва',
@@ -54,7 +54,7 @@ module.exports = {
       updatedAt: new Date(),
     },
     {
-      title: 'Слизеног, Незваный Пассажир ',
+      title: 'Слизеног, Незваный Пассажир',
       link: 'https://mtgsale.ru/cardImage/dom/RUS/205.jpg',
       cost: '10,2',
       location: 'Москва',
@@ -67,7 +67,7 @@ module.exports = {
       updatedAt: new Date(),
     },
     {
-      title: 'Арвад Проклятый ',
+      title: 'Арвад Проклятый',
       link: 'https://mtgsale.ru/cardImage/dom/RUS/191.jpg',
       cost: '10,2',
       location: 'Москва',

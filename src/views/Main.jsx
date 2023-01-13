@@ -11,7 +11,7 @@ function Main({ allCard, user }) {
         <select name="filter" id="citiesSelect">
           <option />
           <option>Москва</option>
-          <option>Москва и МО</option>
+          <option>МО</option>
           <option>Санкт-Петербург</option>
           <option>Севастополь</option>
           <option>Владивосток</option>
