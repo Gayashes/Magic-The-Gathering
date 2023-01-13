@@ -6,9 +6,8 @@ function Cabinet({ user, userCards }) {
     <Layout user={user}>
       <link rel="stylesheet" defer href="/css/cabinet.css" />
       <div className="cabinetMine">
-        <div>
-          <h2>Добавить карточку на продажу</h2>
-          <div className="cabitetInput">
+            <div className="cabitetInput">
+            <h2>Добавить карточку на продажу</h2>
             <form method="POST" action="/cabinet" className="cabinetForm">
               <div className="mb-3">
                 <label htmlFor="exampleInputTitle" className="form-label">Наименование</label>
@@ -37,9 +36,8 @@ function Cabinet({ user, userCards }) {
               <button type="submit" className="btn btn-primary">Загрузить</button>
             </form>
           </div>
-        </div>
 
-        <div className="cabinetCards scrollform">
+        <div className="cabinetCards">
           <div className="row row-cols-1 row-cols-md-2 g-4">
 
             {userCards.map((card) => (
