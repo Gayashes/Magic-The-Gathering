@@ -1,8 +1,10 @@
 .cardAll {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+
     background: linear-gradient(rgba(0, 0, 0, 0.82),rgba(77, 19, 19, 0.864) );
     width: 1200px;
-    height: 600px;
+    height: 650px;
+    border-radius: 20px;
 }
 
 .basket {
@@ -10,9 +12,11 @@
     flex-direction: row;
     overflow-y: scroll;
     overflow-x: hidden;
+    
 }
 
 .basket2 {
+    
     height: 500px;
     width: 1000px;
 }

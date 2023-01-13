@@ -5,7 +5,7 @@ function OnecardMain({ user, oneCard }) {
   return (
     <Layout user={user}>
       <link rel="stylesheet" defer href="/css/cardOne.css" />
-      <div className="containerOne ">
+      <div className="containerOneCard ">
               <div className="containerOne col-sm-6 " >
                     <img src={oneCard.link} className="card-img-top cardimg " alt="card-img" />
                 <div className="card cardOne ">

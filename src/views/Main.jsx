@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable react/prop-types */
 const React = require('react');
 const Layout = require('./Layout');
@@ -5,13 +6,16 @@ const Layout = require('./Layout');
 function Main({ allCard, user }) {
   return (
     <Layout user={user}>
+      <div className='vsefiltr'>
       <form className="maimFilter" method="POST" action="/filter">
-        <label htmlFor="exampleInputURL" className="form-label filter" key="filter-label" />
-        <h6 type="text" data-cardid="maincardAll" className="form-control filter cities" placeholder="Фильровать по городу" name="city" list="cities">Фильтровать по городу</h6>
+        {/* <label htmlFor="exampleInputURL" className="form-label filter" key="filter-label" /> */}
+        {/* <h6 type="text" data-cardid="maincardAll" className="form-control filter cities"  name="city" list="cities">Фильтровать по городу</h6> */}
+        <h4>Фильтровать по городу </h4>
+        <div className="newdivfilt1">
         <select name="filter" id="citiesSelect">
           <option />
           <option>Москва</option>
-          <option>Москва и МО</option>
+          <option>МО</option>
           <option>Санкт-Петербург</option>
           <option>Севастополь</option>
           <option>Владивосток</option>
@@ -19,13 +23,15 @@ function Main({ allCard, user }) {
           <option>Астрахань</option>
         </select>
         <button id="filterfetch" type="click" className="btn btn-primary">Загрузить</button>
+        </div>
       </form>
       <form className="searchPost" method="POST" action="/search">
+      <h4>Фильтровать по названию</h4>
         <input type="title" name="titlesearch" className="form-control search" id="123" placeholder="Поиск" />
         <button id="searchfetch" type="click" className="btn btn-primary">Поиск</button>
 
       </form>
-
+      </div>
       <div className="scrollform">
 
         {user ? (

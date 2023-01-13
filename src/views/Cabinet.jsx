@@ -33,7 +33,7 @@ function Cabinet({ user, userCards }) {
                 <option value="Плохое">Плохое</option>
 
               </select>
-              <button type="submit" className="btn btn-primary">Загрузить</button>
+              <button type="submit" style={{ marginTop: 15}}className="btn btn-primary">Загрузить</button>
             </form>
           </div>
 
