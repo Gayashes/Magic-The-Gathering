@@ -77,7 +77,6 @@ function Layout({ children, user }) {
               <div><a href="https://github.com/Gayashes" style={{ color: '#af8b4c' }}>Gayane Nalbandyan</a></div>
               <div><a href="https://github.com/Khramklen" style={{ color: '#af8b4c' }}>Elena Khramkova</a></div>
             </div>
-
           </div>
         </footer>
       </body>

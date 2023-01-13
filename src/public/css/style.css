@@ -205,6 +205,36 @@ body {
   justify-content:space-evenly;
   color: black;
 }
+.orderstat {
+  border: solid 2px;
+  column-width: 200px;
+  font-size: 35px;
+  word-wrap: break-word;
 
+  
+}
+.sizeorder {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.buyorder{
+  text-align: center;
+  width: 20%;
+  height: 80%;
+  justify-content: center;
+}
+.buyorderDiv{
+  display: flex;
+  justify-content: center;
+  
+}
+.buyorder{
+  font-size: 20px; 
+}
 
 
