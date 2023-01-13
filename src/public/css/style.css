@@ -72,6 +72,7 @@ h4 {
 .footer {
   bottom: 0px;
   position: fixed;
+  height: 90px;
   width: 100%;
   text-align: center;
   background: linear-gradient(rgba(77, 19, 19, 0.864), rgba(0, 0, 0, 0.82))
@@ -233,7 +234,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content:space-evenly;
-  color: black;
+  font-size: 20px;
 }
 .orderstat {
   border: solid 2px;
