@@ -70,7 +70,14 @@ function Layout({ children, user }) {
 
         <footer className="bg-light text-center text-lg-start footer">
           <div className="text-center p-3">
-            <p> Наши контактные данные </p>
+            <p style={{ color: '#af8b4c' }}>Prodused by</p>
+            <div className="footerProdused" style={{ color: '#af8b4c' }}>
+              <div><a href="https://github.com/m-DZEN" style={{ color: '#af8b4c' }}>Maxim Voronin</a></div>
+              <div><a href="https://github.com/vladmalovich" style={{ color: '#af8b4c' }}>Vladimir Malovichko</a></div>
+              <div><a href="https://github.com/Gayashes" style={{ color: '#af8b4c' }}>Gayane Nalbandyan</a></div>
+              <div><a href="https://github.com/Khramklen" style={{ color: '#af8b4c' }}>Elena Khramkova</a></div>
+            </div>
+
           </div>
         </footer>
       </body>

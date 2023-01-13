@@ -213,6 +213,12 @@ body {
   width: 90%;
   height: 80%;
 }
+.footerProdused {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  color: black;
+}
 
 
 
