@@ -10,13 +10,20 @@
   font-family: 'Minotaur-Jugendstil';
   src: url(../fonts/Minotaur-Jugendstil.ttf);
 }
+.vsefiltr {
+  border: 2px solid rgba(77, 19, 19, 0.864);
+  /* display: flex;
+  justify-content: left; */
+  padding: 10px;
+  
+}
 .container {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 400px;
-
+  
 
   height: 800px;
 }
@@ -24,6 +31,8 @@
   overflow-y: scroll;
   overflow-x: hidden;
   height: 600px;
+  border-radius: 20px;
+  /* width: 1400px; */
 }
 
 .container-fluid {
@@ -49,11 +58,14 @@
   background: linear-gradient(rgba(77, 19, 19, 0.864), rgba(0, 0, 0, 0.82));
   margin-bottom: 240px;
   margin-top: 50px;
-  
+  height: max-content;
+  border-radius: 40px;
+  box-shadow: 10px 5px 5px 5px rgba(0.5, 0.5, 0.5, 0.5);
 }
 .form-control {
   margin: 10px;
   margin-left: 70px;
+  
 }
 body {
   background-size: auto;

@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable react/prop-types */
 const React = require('react');
 const Layout = require('./Layout');
@@ -5,6 +6,7 @@ const Layout = require('./Layout');
 function Main({ allCard, user }) {
   return (
     <Layout user={user}>
+      <div className='vsefiltr'>
       <form className="maimFilter" method="POST" action="/filter">
         <label htmlFor="exampleInputURL" className="form-label filter" key="filter-label" />
         <h6 type="text" data-cardid="maincardAll" className="form-control filter cities" placeholder="Фильровать по городу" name="city" list="cities">Фильтровать по городу</h6>
@@ -25,7 +27,7 @@ function Main({ allCard, user }) {
         <button id="searchfetch" type="click" className="btn btn-primary">Поиск</button>
 
       </form>
-
+      </div>
       <div className="scrollform">
 
         {user ? (
