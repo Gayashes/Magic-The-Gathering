@@ -24,6 +24,12 @@ module.exports = {
           key: 'id',
         },
       },
+      user_id_buy: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+
+      },
+
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
